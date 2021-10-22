@@ -1,0 +1,103 @@
+@media only screen and (max-width: 768px){
+    * {
+    }
+    html {
+    }
+    body {
+    }
+    /* ======================================= */
+    /* Navbar */
+    .navContainer {
+        width: 10%;
+        border: none;
+    }
+    .navContent {
+    }
+    /* Logo Detailes */
+    .logoInfo {
+    }
+    .logoImg {
+        margin: 10px auto;
+    }
+    .logoImg img {
+        width: 2.75em;
+        height: 2.75em;
+    }
+    .logoTitle {
+        display: none;
+    }
+    /* Website Sections */
+    .ulContainer {
+    }
+    .ulContainer ul {
+    }
+    .ulContainer ul li {
+    }
+    .ulContainer ul li.clicked {
+    }
+    .ulContainer ul li a {
+    }
+    .ulContainer ul li.clicked a {
+        padding: 0;
+    }
+    .ulContainer ul li.clicked a::before {
+    }
+    .ulContainer ul li.clicked a::after {
+    }
+    .ulContainer ul li a .icon {
+        margin: auto;
+        z-index: 1000;
+    }
+    .ulContainer ul li a .fa-home {
+    }
+    .ulContainer ul li a .title {
+        display: none;
+    }
+    /* Dark Mood Controls */
+    .darkModeContainer {
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(0);
+    }
+    .darkModeContainer div {
+        width: 1.75em;
+        height: 1.75em;
+    }
+    .darkModeContainer .light.clicked,
+    .darkModeContainer .dark.clicked {
+    }
+    /* ======================================= */
+    /* Main Content */
+    .mainContainer {
+        width: 90%;
+    }
+    /* Top Bar */
+    .topBar {
+        width: 90%;
+    }
+    .topBar .forDesktop img {
+        display: none;
+    }
+    .topBar .forMobile {
+        display: none;
+    }
+    .topBar .search {
+        margin-top: 20px;
+    }
+    .search .searchContainer {
+    }
+    .topBar .search input {
+        width: 25em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(0);
+        margin: 0 auto;
+    }
+    .topBar .search input::placeholder {
+    }
+    .topBar .search i {
+        left: 0.5em;
+        top: 10px;
+    }
+}

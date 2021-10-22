@@ -1,0 +1,71 @@
+@media only screen and (min-width: 1025px){
+    * {
+    }
+    html {
+    }
+    body {
+    }
+    /* ======================================= */
+    /* Navbar */
+    .navContainer {
+    }
+    .navContent {
+    }
+    /* Logo Detailes */
+    .logoInfo {
+    }
+    .logoImg img {
+    }
+    .logoTitle {
+    }
+    /* Website Sections */
+    .ulContainer {
+    }
+    .ulContainer ul {
+    }
+    .ulContainer ul li {
+    }
+    .ulContainer ul li.clicked {
+    }
+    .ulContainer ul li a {
+    }
+    .ulContainer ul li.clicked a {
+    }
+    .ulContainer ul li.clicked a::before {
+    }
+    .ulContainer ul li.clicked a::after {
+    }
+    .ulContainer ul li a .icon {
+    }
+    .ulContainer ul li a .fa-home {
+    }
+    .ulContainer ul li a .title {
+    }
+    /* Dark Mood Controls */
+    .darkModeContainer {
+    }
+    .darkModeContainer div {
+    }
+    .darkModeContainer .light.clicked,
+    .darkModeContainer .dark.clicked {
+    }
+    /* ======================================= */
+    /* Main Content */
+    .mainContainer {
+    }
+    /* Top Bar */
+    .topBar {
+    }
+    .topBar img {
+    }
+    .topBar .search {
+    }
+    .search .searchContainer {
+    }
+    .topBar .search input {
+    }
+    .topBar .search input::placeholder {
+    }
+    .topBar .search i {
+    }
+}
