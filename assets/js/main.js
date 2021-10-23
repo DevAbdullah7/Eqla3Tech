@@ -11,17 +11,29 @@ let topBar = document.querySelector('.topBar');
 home.onclick = function () {
     sections.classList.remove('clicked');
     lastNews.classList.remove('clicked');
-    home.classList.add('clicked')
+    home.classList.add('clicked');
+    menuMobile.classList.toggle('activate');
+    navContainer.classList.toggle('activate');
+    mainContainer.classList.toggle('activate');
+    topBar.classList.toggle('activate')
 };
 sections.onclick = function () {
     home.classList.remove('clicked');
     lastNews.classList.remove('clicked');
-    sections.classList.add('clicked')
+    sections.classList.add('clicked');
+    menuMobile.classList.toggle('activate');
+    navContainer.classList.toggle('activate');
+    mainContainer.classList.toggle('activate');
+    topBar.classList.toggle('activate')
 };
 lastNews.onclick = function () {
     home.classList.remove('clicked');
     sections.classList.remove('clicked');
-    lastNews.classList.add('clicked')
+    lastNews.classList.add('clicked');
+    menuMobile.classList.toggle('activate');
+    navContainer.classList.toggle('activate');
+    mainContainer.classList.toggle('activate');
+    topBar.classList.toggle('activate')
 }
 light.onclick = function () {
     dark.classList.remove('clicked');

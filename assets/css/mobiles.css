@@ -45,12 +45,15 @@
         .ulContainer ul li a {
             display: flex;
             justify-content: center;
+            /* margin-right: 15%; */
         }
         .ulContainer ul li.clicked a {
         }
         .ulContainer ul li.clicked a::before {
+            /* left: 51px; */
         }
         .ulContainer ul li.clicked a::after {
+            /* left: 51px; */
         }
         .ulContainer ul li a .icon {
             margin: 0;
