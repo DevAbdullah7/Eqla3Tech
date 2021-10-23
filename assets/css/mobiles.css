@@ -9,7 +9,7 @@
         /* Navbar */
         .navContainer {
             width: 0;
-            border: none;
+            border: none !important;
             transition: 0.5s;
         }
         .navContainer.activate {
@@ -98,13 +98,27 @@
         .topBar.activate .logo {
             /* display: none; */
         }
-        .topBar .forDesktop {
+        .topBar .forDesktopLight,
+        .topBar .forDesktopDark {
             display: none;
         }
-        .topBar .forMobile {
+        .topBar .forMobileLight img,
+        .topBar .forMobileDark img {
             display: block;
         }
-        .topBar .forMobile img {
+        .mainContainer .topBar .forMobileLight {
+            display: block;
+        }
+        .mainContainer.dark .topBar .forMobileLight {
+            display: none;
+        }
+        .mainContainer .topBar .forMobileDark {
+            display: none;
+        }
+        .mainContainer.dark .topBar .forMobileDark {
+            display: block;
+        }
+        .topBar .logo img {
             width: 2.5em;
             height: 2.5em;
         }
@@ -136,7 +150,11 @@
             align-items: stretch;
             color: var(--navSkyBlue);
         }
+        .mainContainer.dark .menuMobile i {
+            color: var(--white);
+        }
         .topBar.activate .menuMobile {
+            display: block;
             transform: translateX(25%);
         }
 }

@@ -58,6 +58,10 @@
     }
     .topBar img {
     }
+    .topBar .forMobileLight img,
+    .topBar .forMobileDark img {
+        display: none;
+    }
     .topBar .search {
     }
     .search .searchContainer {

@@ -15,8 +15,10 @@
     .logoInfo {
     }
     .logoImg img {
+        display: none;
     }
     .logoTitle {
+        font-size: 20px;
     }
     /* Website Sections */
     .ulContainer {
@@ -56,13 +58,18 @@
     /* Top Bar */
     .topBar {
     }
-    .topBar img {
+    .topBar .logo img {
+    }
+    .topBar .forMobileLight img,
+    .topBar .forMobileDark img {
+        display: none;
     }
     .topBar .search {
     }
     .search .searchContainer {
     }
     .topBar .search input {
+        width: 20em;
     }
     .topBar .search input::placeholder {
     }

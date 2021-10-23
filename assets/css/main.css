@@ -33,6 +33,10 @@ body {
     width: 100%;
     min-height: 100vh;
     display: flex;
+    transition: background-color 0.5s;
+}
+.body.dark {
+    background-color: var(--grayBlack);
 }
 /* ======================================= */
 
@@ -48,6 +52,10 @@ body {
     overflow: hidden;
     z-index: 1000;
     transition: 0.5s;
+}
+.navContainer.dark {
+    background-color: #222;
+    border-right: 10px solid #222;
 }
 .navContent {
     position: relative;
@@ -105,9 +113,18 @@ body {
     list-style: none;
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
+    transition: 0s;
+}
+.navContainer.dark .ulContainer ul li {
+    transition: 0s;
 }
 .ulContainer ul li.clicked {
     background-color: var(--white);
+    transition: 0s;
+}
+.navContainer.dark .ulContainer ul li.clicked {
+    background-color: var(--grayBlack);
+    transition: 0s;
 }
 .ulContainer ul li a {
     position: relative;
@@ -121,6 +138,9 @@ body {
     color: var(--navSkyBlue);
     padding-right: 20px;
 }
+.navContainer.dark .ulContainer ul li.clicked a {
+    color: var(--white);
+}
 .ulContainer ul li.clicked a::before {
     position: absolute;
     content: '';
@@ -132,6 +152,7 @@ body {
     box-shadow: -35px 35px 0 10px var(--white);
     background-color: transparent;
     pointer-events: none;
+    transition: 0s;
 }
 .ulContainer ul li.clicked a::after {
     position: absolute;
@@ -144,6 +165,15 @@ body {
     box-shadow: -35px -35px 0 10px var(--white);
     background-color: transparent;
     pointer-events: none;
+    transition: 0s;
+}
+.navContainer.dark .ulContainer ul li.clicked a::before {
+    box-shadow: -35px 35px 0 10px var(--grayBlack);
+    transition: 0s;
+}
+.navContainer.dark .ulContainer ul li.clicked a::after {
+    box-shadow: -35px -35px 0 10px var(--grayBlack);
+    transition: 0s;
 }
 .ulContainer ul li a .icon {
     position: relative;
@@ -153,6 +183,7 @@ body {
     text-align: center;
     font-size: 1.5em;
     filter: drop-shadow(0 0 5px rgba(3, 3, 3, 0.25));
+    transition: 0.5s;
 }
 .ulContainer ul li a .fa-home {
     font-size: 1.9em;
@@ -166,6 +197,7 @@ body {
     white-space: nowrap;
     font-size: 1.4em;
     text-shadow: 0 0 5px rgba(3, 3, 3, 0.25);
+    transition: 0.5s;
 }
 /* Dark Mood Controls */
 .darkModeContainer {
@@ -189,8 +221,7 @@ body {
     padding: 10px;
     border-radius: 15px;
 }
-.darkModeContainer .light.clicked,
-.darkModeContainer .dark.clicked {
+.darkModeContainer .clicked {
     border: 1px solid rgba(255, 255, 255, 0.75);
 }
 /* ======================================= */
@@ -213,10 +244,22 @@ body {
     display: flex;
     transition: 0.5s;
 }
-.topBar .forDesktop img {
+.mainContainer .topBar .forDesktopLight img {
     display: block;
-    width: 150px;
-    height: 150px;
+    width: 9em;
+    height: 9em;
+    transform: translateY(-35px);
+}
+.mainContainer.dark .topBar .forDesktopLight img {
+    display: none;
+}
+.mainContainer .topBar .forDesktopDark img {
+    display: none;
+}
+.mainContainer.dark .topBar .forDesktopDark img {
+    display: block;
+    width: 9em;
+    height: 9em;
     transform: translateY(-35px);
 }
 .topBar .forMobile {
@@ -225,6 +268,7 @@ body {
 .topBar .search {
     position: relative;
     flex-grow: 1;
+    flex-shrink: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,13 +277,13 @@ body {
     position: relative;
 }
 .topBar .search input {
-    width: 500px;
+    width: 30em;
     height: 35px;
     margin: 5px 0 0 50px;
     transform: translateX(-50%);
     border-radius: 30px;
     outline: none;
-    border: 2px solid rgba(3, 3, 3, 0.25);
+    border: 1px solid rgba(3, 3, 3, 0.25);
     text-align: center;
 }
 .topBar .search input::placeholder {
@@ -261,5 +305,5 @@ body {
     display: none;
 }
 .menuMobile.activate{
-    display: block;
+    display: none;
 }

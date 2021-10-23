@@ -9,7 +9,7 @@
     /* Navbar */
     .navContainer {
         width: 10%;
-        border: none;
+        border: none !important;
     }
     .navContent {
     }
@@ -20,6 +20,7 @@
         margin: 10px auto;
     }
     .logoImg img {
+        display: block;
         width: 2.75em;
         height: 2.75em;
     }
@@ -75,10 +76,10 @@
     .topBar {
         width: 90%;
     }
-    .topBar .forDesktop img {
+    .topBar .logo {
         display: none;
     }
-    .topBar .forMobile {
+    .topBar .forMobileLight {
         display: none;
     }
     .topBar .search {
