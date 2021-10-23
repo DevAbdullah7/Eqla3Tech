@@ -44,7 +44,7 @@
         }
         .ulContainer ul li a {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             /* margin-right: 15%; */
         }
         .ulContainer ul li.clicked a {
