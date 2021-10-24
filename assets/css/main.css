@@ -33,6 +33,7 @@ body {
     width: 100%;
     min-height: 100vh;
     display: flex;
+    background-color: var(--grayWhite);
     transition: background-color 0.5s;
 }
 .body.dark {
@@ -73,11 +74,11 @@ body {
     width: 100%;
 }
 .logoImg {
-
+    margin: 10px 2.5% 0 0;
 }
 .logoImg img {
-    width: 4.6em;
-    height: 4.6em;
+    width: 4em;
+    height: 4em;
     filter: drop-shadow(0 0 5px var(--grayBlack));
     cursor: pointer;
 }
@@ -119,7 +120,7 @@ body {
     transition: 0s;
 }
 .ulContainer ul li.clicked {
-    background-color: var(--white);
+    background-color: var(--grayWhite);
     transition: 0s;
 }
 .navContainer.dark .ulContainer ul li.clicked {
@@ -149,7 +150,7 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    box-shadow: -35px 35px 0 10px var(--white);
+    box-shadow: -35px 35px 0 10px var(--grayWhite);
     background-color: transparent;
     pointer-events: none;
     transition: 0s;
@@ -162,7 +163,7 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    box-shadow: -35px -35px 0 10px var(--white);
+    box-shadow: -35px -35px 0 10px var(--grayWhite);
     background-color: transparent;
     pointer-events: none;
     transition: 0s;
@@ -239,16 +240,18 @@ body {
 .topBar {
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 5em;
     top: 0;
     display: flex;
     transition: 0.5s;
+    overflow: hidden;
 }
 .mainContainer .topBar .forDesktopLight img {
     display: block;
-    width: 9em;
-    height: 9em;
-    transform: translateY(-35px);
+    width: 8.5em;
+    height: 4.25em;
+    margin: 10px 0 0 10px;
+    filter: drop-shadow(0 0 2.5px rgba(3, 3, 3, 0.25));
 }
 .mainContainer.dark .topBar .forDesktopLight img {
     display: none;
@@ -258,9 +261,10 @@ body {
 }
 .mainContainer.dark .topBar .forDesktopDark img {
     display: block;
-    width: 9em;
-    height: 9em;
-    transform: translateY(-35px);
+    width: 8.5em;
+    height: 4.25em;
+    margin: 10px 0 0 10px;
+    filter: drop-shadow(0 0 2.5px rgba(3, 3, 3, 0.25));
 }
 .topBar .forMobile {
     display: none;
@@ -279,7 +283,6 @@ body {
 .topBar .search input {
     width: 30em;
     height: 35px;
-    margin: 5px 0 0 50px;
     transform: translateX(-50%);
     border-radius: 30px;
     outline: none;
@@ -306,4 +309,70 @@ body {
 }
 .menuMobile.activate{
     display: none;
+}
+/* ======================================= */
+
+/* Website Content */
+/* Home */
+.homePage {
+    padding-top: 5em;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--grayWhite); */
+    transition: 0.5s;
+}
+.mainContainer.dark .homePage {
+    /* background-color: var(--grayBlack); */
+}
+.homeImg {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+}
+.homeImg img {
+    width: 100%;
+    filter: drop-shadow(5px 5px 20px rgba(3, 3, 3, 0.5));
+}
+.mainContainer.dark .homeImg .homeImgLight {
+    display: none;
+}
+.homeImg .homeImgDark {
+    display: none;
+}
+.mainContainer.dark .homeImg .homeImgDark {
+    display: block;
+}
+.homeTitle {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.homeTitle h1 {
+    position: relative;
+    transform: translateY(-50px);
+    font-size: 5em;
+    color: var(--grayBlack);
+    text-shadow: 0 0 5px rgba(3, 3, 3, 0.35);
+    transition: 0.5s;
+}
+.mainContainer.dark .homeTitle h1 {
+    color: var(--white);
+}
+.homeTitle p {
+    font-size: 2em;
+    text-shadow: 0 0 5px rgba(3, 3, 3, 0.35);
+    font-weight: 400;
+    transition: 0.5s;
+}
+.mainContainer.dark .homeTitle p {
+    color: var(--white);
+}
+.sectionsPage {
+    min-height: 100vh;
 }

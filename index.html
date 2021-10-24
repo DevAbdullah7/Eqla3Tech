@@ -41,14 +41,14 @@
             </div>
             <div class="ulContainer">
                 <ul>
-                    <li class="home clicked" id="home">
-                        <a href="#">
+                    <li class="home clicked">
+                        <a href="#home">
                             <i class="icon fa fa-home" aria-hidden="true"></i>
                             <span class="title">الرئيسية</span>
                         </a>
                     </li>
                     <li class="sections">
-                        <a href="#">
+                        <a href="#sections">
                             <i class="icon fa fa-folder-open" aria-hidden="true"></i>
                             <span class="title">الاقسام</span>
                         </a>
@@ -80,10 +80,12 @@
     <div class="mainContainer light">
         <div class="topBar">
             <div class="logo">
-                <a href="#" class="forDesktopLight"><img src="./assets/media/logo/logoBlue.png" alt=""></a>
-                <a href="#" class="forDesktopDark"><img src="./assets/media/logo/logoWhite.png" alt=""></a>
-                <a href="#" class="forMobileLight"><img src="./assets/media/logo/logoBlueWithOutText.png" alt=""></a>
-                <a href="#" class="forMobileDark"><img src="./assets/media/logo/logoWhiteWithOutText.png" alt=""></a>
+                <a href="#home" class="forDesktopLight"><img src="./assets/media/logo/logoBlue.png" alt=""></a>
+                <a href="#home" class="forDesktopDark"><img src="./assets/media/logo/logoWhite.png" alt=""></a>
+                <a href="#home" class="forMobileLight"><img src="./assets/media/logo/logoBlueWithOutText.png"
+                        alt=""></a>
+                <a href="#home" class="forMobileDark"><img src="./assets/media/logo/logoWhiteWithOutText.png"
+                        alt=""></a>
             </div>
             <div class="search">
                 <div class="searchContainer">
@@ -95,7 +97,21 @@
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </div>
         </div>
-        <div class="content"></div>
+        <div class="content">
+            <div class="homePage" id="home">
+                <div class="homeImg">
+                    <img src="./assets/media/forHomeLight.png" alt="" class="homeImgLight">
+                    <img src="./assets/media/forHomeDark.png" alt="" class="homeImgDark">
+                </div>
+                <div class="homeTitle">
+                    <h1>اقـلاع تـيـك’</h1>
+                    <p>وجد ليقدم لكم شروحات ومقالات عن التقنية عامة</p>
+                </div>
+            </div>
+            <div class="sectionsPage" id="sections">
+
+            </div>
+        </div>
     </div>
     <!-- Js Files -->
     <script src="./assets/js/jquery-3.6.0.min.js"></script>

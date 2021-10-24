@@ -76,18 +76,18 @@
         /* ======================================= */
         /* Main Content */
         .mainContainer {
+            width: 100%;
         }
         .mainContainer.activate {
-            transform: translateX(-90%);
+            transform: translateX(-100%);
         }
         /* Top Bar */
         .topBar {
             width: 100%;
             padding: 0 10px;
-            margin: 10px 0;
         }
         .topBar.activate {
-            /* transform: translateX(-95%); */
+            transform: translateX(9%);
             z-index: 2000;
         }
         .topBar .logo {
@@ -138,8 +138,7 @@
             display: block;
             display: flex;
             justify-content: center;
-            align-items: stretch;
-            padding-top: 10px;
+            align-items: center;
             cursor: pointer;
         }
         .menuMobile i {
@@ -156,5 +155,23 @@
         .topBar.activate .menuMobile {
             display: block;
             transform: translateX(25%);
+        }
+        /* ======================================= */
+        /* Home Page */
+        .homePage {
+            flex-direction: column-reverse;
+        }
+        .homeTitle {
+            width: 100%;
+        }
+        .homeTitle h1 {
+            font-size: 4em;
+        }
+        .homeTitle p {
+            text-align: center;
+            font-size: 1.75em;
+        }
+        .homeImg {
+            width: 100%;
         }
 }
