@@ -245,6 +245,7 @@ body {
     display: flex;
     transition: 0.5s;
     overflow: hidden;
+    z-index: 1000;
 }
 .mainContainer .topBar .forDesktopLight img {
     display: block;
