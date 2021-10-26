@@ -22,6 +22,7 @@
         }
         /* Logo Detailes */
         .logoInfo {
+            flex-direction: row-reverse;
         }
         .logoImg {
             width: 75px;
@@ -30,8 +31,11 @@
         }
         .logoTitle {
             display: block;
-            margin: 15px 0 0 60px;
+            margin: auto 13% auto 0;
             letter-spacing: 5px;
+        }
+        .logoTitle p {
+            margin: 0;
         }
         /* Website Sections */
         .ulContainer {
@@ -87,8 +91,10 @@
             padding: 0 10px;
         }
         .topBar.activate {
-            transform: translateX(9%);
-            z-index: 2000;
+            transform: translateX(100%);
+            z-index: 2;
+            background-color: transparent;
+            height: 3em;
         }
         .topBar .logo {
             display: flex;
@@ -96,7 +102,7 @@
             align-items: center;
         }
         .topBar.activate .logo {
-            /* display: none; */
+            visibility: hidden;
         }
         .topBar .forDesktopLight,
         .topBar .forDesktopDark {
@@ -107,13 +113,13 @@
             display: block;
         }
         .mainContainer .topBar .forMobileLight {
-            display: block;
+            display: none;
         }
         .mainContainer.dark .topBar .forMobileLight {
             display: none;
         }
         .mainContainer .topBar .forMobileDark {
-            display: none;
+            display: block;
         }
         .mainContainer.dark .topBar .forMobileDark {
             display: block;
@@ -125,6 +131,9 @@
         .topBar .search {
             margin: 0;
         }
+        .topBar.activate .search {
+            visibility: hidden;
+        }
         .search .searchContainer {
         }
         .topBar .search input {
@@ -135,26 +144,14 @@
         .topBar .search i {
         }
         .menuMobile {
-            display: block;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-        .menuMobile i {
-            width: 1.5em;
-            font-size: 1.5em;
-            display: flex;
-            justify-content: center;
-            align-items: stretch;
-            color: var(--navSkyBlue);
+            width: 25px;
+            height: 25px;
         }
         .mainContainer.dark .menuMobile i {
             color: var(--white);
         }
         .topBar.activate .menuMobile {
-            display: block;
-            transform: translate(25%, 15%);
+            transform: translate(20%, 25%);
         }
         /* ======================================= */
         /* Home Page */

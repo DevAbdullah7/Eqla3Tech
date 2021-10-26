@@ -51,7 +51,6 @@ body {
     border-right: 10px solid var(--navSkyBlue);
     transition: 0.5s;
     overflow: hidden;
-    z-index: 1000;
     transition: 0.5s;
 }
 .navContainer.dark {
@@ -243,9 +242,20 @@ body {
     height: 5em;
     top: 0;
     display: flex;
-    transition: 0.5s;
     overflow: hidden;
+    box-shadow: 0 1px 5px 5px rgba(3, 3, 3, 0.25);
     z-index: 1000;
+    transition: 0.5s;
+}
+.mainContainer .topBar {
+    background-color: var(--navSkyBlue);
+}
+.mainContainer.dark .topBar {
+    background-color: var(--grayBlack);
+}
+.mainContainer .topBar.activate {
+    background-color: transparent;
+    box-shadow: none;
 }
 .mainContainer .topBar .forDesktopLight img {
     display: block;
@@ -306,10 +316,25 @@ body {
     opacity: 0.5;
 }
 .menuMobile {
-    display: none;
+    /* display: none; */
+    width: 40px;
+    height: 40px;
+    margin: auto 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    cursor: pointer;
 }
 .menuMobile.activate{
-    display: none;
+    /* display: none; */
+}
+.menuMobile span {
+    width: 90%;
+    height: 5px;
+    margin: auto;
+    background-color: var(--white);
+    border-radius: 5px;
+    border: 1px solid var(--white);
 }
 /* ======================================= */
 
