@@ -10,41 +10,42 @@ let body = document.querySelector('.body');
 let navContainer = document.querySelector('.navContainer');
 let mainContainer = document.querySelector('.mainContainer');
 let topBar = document.querySelector('.topBar');
-home.onclick = function () {
-    sections.classList.remove('clicked');
-    lastNews.classList.remove('clicked');
-    contact.classList.remove('clicked');
-    home.classList.add('clicked');
+
+home.onclick = function putHomeClicked() {
+    // sections.classList.remove('clicked');
+    // lastNews.classList.remove('clicked');
+    // contact.classList.remove('clicked');
+    // home.classList.add('clicked');
     menuMobile.classList.toggle('activate');
     navContainer.classList.toggle('activate');
     mainContainer.classList.toggle('activate');
     topBar.classList.toggle('activate')
 };
-sections.onclick = function () {
-    home.classList.remove('clicked');
-    lastNews.classList.remove('clicked');
-    contact.classList.remove('clicked');
-    sections.classList.add('clicked');
+sections.onclick = function putSectionsClicked() {
+    // home.classList.remove('clicked');
+    // lastNews.classList.remove('clicked');
+    // contact.classList.remove('clicked');
+    // sections.classList.add('clicked');
     menuMobile.classList.toggle('activate');
     navContainer.classList.toggle('activate');
     mainContainer.classList.toggle('activate');
     topBar.classList.toggle('activate')
 };
 lastNews.onclick = function () {
-    home.classList.remove('clicked');
-    sections.classList.remove('clicked');
-    contact.classList.remove('clicked');
-    lastNews.classList.add('clicked');
+    // home.classList.remove('clicked');
+    // sections.classList.remove('clicked');
+    // contact.classList.remove('clicked');
+    // lastNews.classList.add('clicked');
     menuMobile.classList.toggle('activate');
     navContainer.classList.toggle('activate');
     mainContainer.classList.toggle('activate');
     topBar.classList.toggle('activate')
 };
 contact.onclick = function () {
-    home.classList.remove('clicked');
-    sections.classList.remove('clicked');
-    lastNews.classList.remove('clicked');
-    contact.classList.add('clicked');
+    // home.classList.remove('clicked');
+    // sections.classList.remove('clicked');
+    // lastNews.classList.remove('clicked');
+    // contact.classList.add('clicked');
     menuMobile.classList.toggle('activate');
     navContainer.classList.toggle('activate');
     mainContainer.classList.toggle('activate');
@@ -76,3 +77,26 @@ menuMobile.onclick = function () {
     mainContainer.classList.toggle('activate');
     topBar.classList.toggle('activate')
 }
+window.addEventListener('scroll', function () {
+    if (scrollY < 1041) {
+        sections.classList.remove('clicked');
+        lastNews.classList.remove('clicked');
+        contact.classList.remove('clicked');
+        home.classList.add('clicked');
+    } else if (scrollY < 2083) {
+        home.classList.remove('clicked');
+        lastNews.classList.remove('clicked');
+        contact.classList.remove('clicked');
+        sections.classList.add('clicked');
+    } else if (scrollY < 3124) {
+        home.classList.remove('clicked');
+        sections.classList.remove('clicked');
+        contact.classList.remove('clicked');
+        lastNews.classList.add('clicked');
+    } else {
+        home.classList.remove('clicked');
+        sections.classList.remove('clicked');
+        lastNews.classList.remove('clicked');
+        contact.classList.add('clicked');
+    }
+})

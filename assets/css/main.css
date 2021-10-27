@@ -49,7 +49,7 @@ body {
     right: 0;
     background-color: var(--navSkyBlue);
     border-right: 10px solid var(--navSkyBlue);
-    transition: 0.5s;
+    border-radius: 20px 0 0 20px;
     overflow: hidden;
     transition: 0.5s;
 }
@@ -238,46 +238,43 @@ body {
 /* Top Bar */
 .topBar {
     position: fixed;
-    width: 100%;
-    height: 5em;
+    width: 80%;
+    height: 4em;
     top: 0;
     display: flex;
     overflow: hidden;
-    box-shadow: 0 1px 5px 5px rgba(3, 3, 3, 0.25);
-    z-index: 1000;
+    z-index: 1;
     transition: 0.5s;
 }
 .mainContainer .topBar {
-    background-color: var(--navSkyBlue);
+    background-color: var(--grayWhite);
 }
 .mainContainer.dark .topBar {
     background-color: var(--grayBlack);
 }
 .mainContainer .topBar.activate {
-    background-color: transparent;
     box-shadow: none;
 }
-.mainContainer .topBar .forDesktopLight img {
+.mainContainer .forLightDesktop {
     display: block;
-    width: 8.5em;
-    height: 4.25em;
-    margin: 10px 0 0 10px;
-    filter: drop-shadow(0 0 2.5px rgba(3, 3, 3, 0.25));
 }
-.mainContainer.dark .topBar .forDesktopLight img {
+.mainContainer.dark .forLightDesktop {
     display: none;
 }
-.mainContainer .topBar .forDesktopDark img {
+.mainContainer .forDarkDesktop {
     display: none;
 }
-.mainContainer.dark .topBar .forDesktopDark img {
+.mainContainer.dark .forDarkDesktop {
     display: block;
-    width: 8.5em;
-    height: 4.25em;
-    margin: 10px 0 0 10px;
+}
+.mainContainer .topBar .logo img {
+    width: 6.5em;
+    height: 3.25em;
+    margin: 5px 0 0 10px;
     filter: drop-shadow(0 0 2.5px rgba(3, 3, 3, 0.25));
 }
-.topBar .forMobile {
+.topBar .forLightMobile,
+.topBar .forDarkMobile {
     display: none;
 }
 .topBar .search {
@@ -294,7 +291,6 @@ body {
 .topBar .search input {
     width: 30em;
     height: 35px;
-    transform: translateX(-50%);
     border-radius: 30px;
     outline: none;
     border: 1px solid rgba(3, 3, 3, 0.25);
@@ -308,19 +304,19 @@ body {
 }
 .topBar .search i {
     position: absolute;
-    top: 14px;
-    left: -185px;
+    top: 10px;
+    left: 10px;
     width: 20px;
     height: 20px;
     z-index: 1;
     opacity: 0.5;
 }
 .menuMobile {
-    /* display: none; */
+    display: none;
     width: 40px;
     height: 40px;
     margin: auto 10px;
-    display: flex;
+    /* display: flex; */
     justify-content: space-evenly;
     flex-direction: column;
     cursor: pointer;
@@ -332,15 +328,16 @@ body {
     width: 90%;
     height: 5px;
     margin: auto;
-    background-color: var(--white);
     border-radius: 5px;
-    border: 1px solid var(--white);
 }
 /* ======================================= */
 
 /* Website Content */
 /* Home */
-.homePage {
+.homePage,
+.sectionsPage,
+.lastNewsPage,
+.contactPage {
     padding-top: 5em;
     min-height: 100vh;
     display: flex;

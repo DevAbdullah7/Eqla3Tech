@@ -86,11 +86,11 @@
             transform: translateX(-100%);
         }
         /* Top Bar */
-        .topBar {
+        .mainContainer .topBar {
             width: 100%;
             padding: 0 10px;
         }
-        .topBar.activate {
+        .mainContainer .topBar.activate {
             transform: translateX(100%);
             z-index: 2;
             background-color: transparent;
@@ -104,27 +104,27 @@
         .topBar.activate .logo {
             visibility: hidden;
         }
-        .topBar .forDesktopLight,
-        .topBar .forDesktopDark {
+        .mainContainer .topBar .forLightDesktop,
+        .mainContainer .topBar .forDarkDesktop {
             display: none;
         }
-        .topBar .forMobileLight img,
-        .topBar .forMobileDark img {
+        .topBar .forLightMobile,
+        .topBar .forDarkMobile {
             display: block;
         }
-        .mainContainer .topBar .forMobileLight {
+        .mainContainer .topBar .forLightMobile {
+            display: block;
+        }
+        .mainContainer.dark .topBar .forLightMobile {
             display: none;
         }
-        .mainContainer.dark .topBar .forMobileLight {
+        .mainContainer .topBar .forDarkMobile {
             display: none;
         }
-        .mainContainer .topBar .forMobileDark {
+        .mainContainer.dark .topBar .forDarkMobile {
             display: block;
         }
-        .mainContainer.dark .topBar .forMobileDark {
-            display: block;
-        }
-        .topBar .logo img {
+        .mainContainer .topBar .logo img {
             width: 2.5em;
             height: 2.5em;
         }
@@ -144,11 +144,18 @@
         .topBar .search i {
         }
         .menuMobile {
+            display: flex;
             width: 25px;
             height: 25px;
         }
-        .mainContainer.dark .menuMobile i {
-            color: var(--white);
+        .mainContainer .topBar .menuMobile span {
+            background-color: var(--navSkyBlue);
+        }
+        .mainContainer .topBar.activate .menuMobile span {
+            background-color: var(--white);
+        }
+        .mainContainer.dark .menuMobile span {
+            background-color: var(--white);
         }
         .topBar.activate .menuMobile {
             transform: translate(20%, 25%);
