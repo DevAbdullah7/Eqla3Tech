@@ -7,6 +7,7 @@ let contact = document.querySelector('.contact');
 let light = document.querySelector('#light');
 let dark = document.querySelector('#dark');
 let menuMobile = document.querySelector('.menuMobile');
+let navMobileMenu = document.querySelector('.navMobileMenu');
 let body = document.querySelector('.body');
 let navContainer = document.querySelector('.navContainer');
 let mainContainer = document.querySelector('.mainContainer');
@@ -60,6 +61,12 @@ contact.onclick = function () {
     topBar.classList.toggle('activate')
 };
 menuMobile.onclick = function () {
+    menuMobile.classList.toggle('activate');
+    navContainer.classList.toggle('activate');
+    mainContainer.classList.toggle('activate');
+    topBar.classList.toggle('activate')
+}
+navMobileMenu.onclick = function () {
     menuMobile.classList.toggle('activate');
     navContainer.classList.toggle('activate');
     mainContainer.classList.toggle('activate');

@@ -76,8 +76,8 @@ body {
     margin: 10px 2.5% 0 0;
 }
 .logoImg img {
-    width: 4em;
-    height: 4em;
+    width: 3em;
+    height: 3em;
     filter: drop-shadow(0 0 5px var(--grayBlack));
     cursor: pointer;
 }
@@ -89,11 +89,30 @@ body {
     flex-shrink: 1;
     text-align: center;
     font-family: var(--secondEngFont) !important;
-    font-size: 1.5em;
+    font-size: 1.25em;
     letter-spacing: 2.5px;
     font-weight: bold;
     text-shadow: 0 0 5px var(--grayBlack);
     cursor: default;
+}
+.navMobileMenu {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin: auto 10px;
+    /* display: flex; */
+    justify-content: space-evenly;
+    flex-direction: column;
+    cursor: pointer;
+}
+.navMobileMenu.activate{
+    display: none;
+}
+.navMobileMenu span {
+    width: 90%;
+    height: 5px;
+    margin: auto;
+    border-radius: 5px;
 }
 /* Website Sections */
 .ulContainer {
@@ -355,6 +374,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-shrink: 1;
+    display: none;
 }
 .homeImg img {
     width: 100%;
@@ -375,6 +395,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    display: none;
 }
 .homeTitle h1 {
     position: relative;
