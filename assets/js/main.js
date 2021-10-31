@@ -72,6 +72,10 @@ navMobileMenu.onclick = function () {
     mainContainer.classList.toggle('activate');
     topBar.classList.toggle('activate')
 }
+// let navBarClicke = function scrollHeightly(width, height) {
+//     let width = window.innerWidth;
+//     let height = window.innerHeight;
+// }
 window.addEventListener('scroll', function () {
     if (window.innerWidth > 480) {
         if (scrollY < 900) {

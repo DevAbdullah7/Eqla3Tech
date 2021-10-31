@@ -32,6 +32,7 @@
     .ulContainer ul li a {
     }
     .ulContainer ul li.clicked a {
+        padding: 0;
     }
     .ulContainer ul li.clicked a::before {
     }

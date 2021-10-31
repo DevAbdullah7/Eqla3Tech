@@ -117,11 +117,9 @@ body {
 /* Website Sections */
 .ulContainer {
     width: 100%;
-    transform: translateY(-250px);
     font-family: var(--mainArFont);
 }
 .ulContainer ul {
-    position: absolute;
     width: 100%;
     padding: 0;
 }
@@ -172,6 +170,7 @@ body {
     background-color: transparent;
     pointer-events: none;
     transition: 0s;
+    z-index: -1;
 }
 .ulContainer ul li.clicked a::after {
     position: absolute;
@@ -185,14 +184,17 @@ body {
     background-color: transparent;
     pointer-events: none;
     transition: 0s;
+    z-index: -1;
 }
 .navContainer.dark .ulContainer ul li.clicked a::before {
     box-shadow: -35px 35px 0 10px var(--grayBlack);
     transition: 0s;
+    z-index: -1;
 }
 .navContainer.dark .ulContainer ul li.clicked a::after {
     box-shadow: -35px -35px 0 10px var(--grayBlack);
     transition: 0s;
+    z-index: -1;
 }
 .ulContainer ul li a .icon {
     position: relative;
@@ -323,12 +325,20 @@ body {
 }
 .topBar .search i {
     position: absolute;
-    top: 10px;
+    top: 7.5px;
     left: 10px;
     width: 20px;
     height: 20px;
     z-index: 1;
+    cursor: pointer;
     opacity: 0.5;
+}
+.topBar .search input[type='submit'] {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    /* visibility: hidden; */
 }
 .menuMobile {
     display: none;

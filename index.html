@@ -19,8 +19,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/editBootstrap.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/desktops.css">
     <link rel="stylesheet" href="./assets/css/laptops.css">
@@ -93,10 +91,12 @@
                         alt=""></a>
             </div>
             <div class="search">
-                <div class="searchContainer">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <input type="text" placeholder="search">
-                </div>
+                <form target="" method="get" class="searchContainer">
+                    <i class="search fa fa-search" aria-hidden="true">
+                        <input type="submit">
+                    </i>
+                    <input type="text" placeholder="search" name="search" autocomplete="off">
+                </form>
             </div>
             <div class="menuMobile">
                 <span></span>
@@ -127,8 +127,6 @@
         </div>
     </div>
     <!-- Js Files -->
-    <script src="./assets/js/jquery-3.6.0.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 
