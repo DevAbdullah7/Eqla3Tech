@@ -338,7 +338,7 @@ body {
     width: 30px;
     height: 30px;
     opacity: 0;
-    /* visibility: hidden; */
+    cursor: pointer;
 }
 .menuMobile {
     display: none;
@@ -367,8 +367,9 @@ body {
 .sectionsPage,
 .lastNewsPage,
 .contactPage {
-    padding-top: 5em;
+    width: 100%;
     min-height: 100vh;
+    padding-top: 5em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -378,54 +379,43 @@ body {
 .mainContainer.dark .homePage {
     /* background-color: var(--grayBlack); */
 }
-.homeImg {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 1;
-    display: none;
+#particles-js {
+    /* min-height: 100vh; */
 }
-.homeImg img {
-    width: 100%;
-    filter: drop-shadow(5px 5px 20px rgba(3, 3, 3, 0.5));
-}
-.mainContainer.dark .homeImg .homeImgLight {
-    display: none;
-}
-.homeImg .homeImgDark {
-    display: none;
-}
-.mainContainer.dark .homeImg .homeImgDark {
-    display: block;
-}
-.homeTitle {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    display: none;
-}
-.homeTitle h1 {
+.homeContent {
     position: relative;
-    transform: translateY(-50px);
-    font-size: 5em;
-    color: var(--grayBlack);
-    text-shadow: 0 0 5px rgba(3, 3, 3, 0.35);
-    transition: 0.5s;
+    width: 75%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.mainContainer.dark .homeTitle h1 {
-    color: var(--white);
+.homeContent div {
+    display: none;
+    position: absolute;
+    height: 75%;
+    background-color: #333;
+    border-radius: 25px;
 }
-.homeTitle p {
-    font-size: 2em;
-    text-shadow: 0 0 5px rgba(3, 3, 3, 0.35);
-    font-weight: 400;
-    transition: 0.5s;
+.homeContent .homeInfo {
+    background-color: #ff0;
+    width: 50%;
+    height: 90%;
+    left: 0;
+    z-index: 1;
+    opacity: 0.5;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
 }
-.mainContainer.dark .homeTitle p {
-    color: var(--white);
+.homeContent .homeBackDesign {
+    width: 75%;
+    right: 0;
+    background-color: rgba(238, 238, 238, 0.25);
+}
+.homeBackDesign div {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(238, 238, 238, 0.25);
 }
 .sectionsPage {
     min-height: 100vh;

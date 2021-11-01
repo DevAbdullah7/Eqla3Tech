@@ -103,7 +103,8 @@ window.addEventListener('scroll', function () {
 })
 
 // Dark Mood
-light.onclick = function () {
+function lightMood() {
+    window.localStorage.setItem('mood', 'light');
     dark.classList.remove('clicked');
     light.classList.add('clicked');
     body.classList.remove('dark');
@@ -113,7 +114,8 @@ light.onclick = function () {
     navContainer.classList.add('light');
     mainContainer.classList.add('light');
 };
-dark.onclick = function () {
+function darkMood() {
+    window.localStorage.setItem('mood', 'dark');
     light.classList.remove('clicked');
     dark.classList.add('clicked');
     body.classList.remove('light');
@@ -123,3 +125,18 @@ dark.onclick = function () {
     navContainer.classList.add('dark');
     mainContainer.classList.add('dark');
 };
+if (window.localStorage.hasOwnProperty('mood')) {
+    if (localStorage.valueOf('mood').mood !== 'dark') {
+        lightMood();
+    } else {
+        darkMood();
+    }
+} else {
+    lightMood();
+}
+light.onclick = function () {
+    lightMood();
+};
+dark.onclick = function () {
+    darkMood();
+}
