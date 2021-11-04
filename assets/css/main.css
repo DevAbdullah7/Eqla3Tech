@@ -14,7 +14,7 @@
     --grayWhite: #eee;
     --black: #000;
     --grayBlack: #333;
-    --navSkyBlue: #287bff;
+    --navSkyBlue: #2878fa;
 }
 
 /* ======================================= */
@@ -28,7 +28,7 @@ html {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-body {
+.body {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -38,6 +38,24 @@ body {
 }
 .body.dark {
     background-color: var(--grayBlack);
+}
+.body::after {
+    position: fixed;
+    content: '';
+    width: 70%;
+    height: 95%;
+    bottom: -20%;
+    left: -7.5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: -1;
+}
+.body.light::after {
+    background: url('../media/backLight.svg');
+}
+.body.dark::after {
+    background: url('../media/backDark.svg');
 }
 /* ======================================= */
 
@@ -260,11 +278,11 @@ body {
 .topBar {
     position: fixed;
     width: 80%;
-    height: 4em;
+    height: 7.5vh;
     top: 0;
     display: flex;
     overflow: hidden;
-    z-index: 1;
+    z-index: 2000;
     transition: 0.5s;
 }
 .mainContainer .topBar {
@@ -369,53 +387,233 @@ body {
 .contactPage {
     width: 100%;
     min-height: 100vh;
-    padding-top: 5em;
+    padding-top: 7.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: var(--grayWhite); */
     transition: 0.5s;
 }
 .mainContainer.dark .homePage {
-    /* background-color: var(--grayBlack); */
 }
 #particles-js {
-    /* min-height: 100vh; */
+    opacity: 0.5;
 }
 .homeContent {
     position: relative;
-    width: 75%;
-    height: 75vh;
+    width: 100%;
+    height: 92.5vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 .homeContent div {
-    display: none;
     position: absolute;
-    height: 75%;
-    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 25px;
 }
+
+/* Home Info Section */
 .homeContent .homeInfo {
-    background-color: #ff0;
-    width: 50%;
-    height: 90%;
-    left: 0;
-    z-index: 1;
-    opacity: 0.5;
-    -webkit-backdrop-filter: blur(25px);
-    backdrop-filter: blur(25px);
+    width: 45%;
+    height: 75%;
+    right: 0;
+    flex-direction: column;
+    margin-bottom: 10%;
 }
+.homeInfo .homeLogoImg,
+.homeInfo .homeInfoTitle, 
+.homeInfo .homeSocialCards,
+.homeInfo .homeContactInfo {
+    position: relative;
+    width: 75%;
+    /* height: 20%; */
+    /* background-color: rgba(255, 255, 255, 0.5); */
+}
+
+/* Logo */
+.mainContainer.light .homeInfo .light {
+    display: flex;
+}
+.mainContainer.light .homeInfo .dark {
+    display: none;
+}
+.mainContainer.dark .homeInfo .light {
+    display: none;
+}
+.mainContainer.dark .homeInfo .dark {
+    display: flex;
+}
+.homeInfo .homeLogoImg {
+    height: 20%;
+    display: flex;
+    align-items: flex-end;
+    user-select: none;
+}
+.homeInfo .homeLogoImg img {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.35));
+}
+
+/* Title */
+.homeInfo .homeInfoTitle {
+    width: 75%;
+    /* height: 40%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--grayBlack);
+    text-shadow: 0 0 2.5px rgba(3, 3, 3, 0.25);
+    font-family: var(--mainArFont);
+    user-select: none;
+}
+.homeInfoTitle h2 {
+    margin: 25px auto;
+    font-size: 2.5em;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+}
+.mainContainer.light .homeInfoTitle h2 {
+    color: var(--grayBlack);
+}
+.mainContainer.dark .homeInfoTitle h2 {
+    color: var(--grayWhite);
+}
+.mainContainer.light .homeInfoTitle h2 span {
+    color: var(--navSkyBlue);
+}
+.mainContainer.dark .homeInfoTitle h2 span {
+    color: #222;
+}
+.homeInfoTitle p {
+    font-size: 20px;
+    text-shadow: 0 0 5px rgba(3, 3, 3, 0.25);
+}
+.mainContainer.light .homeInfoTitle p {
+    color: var(--grayBlack);
+}
+.mainContainer.dark .homeInfoTitle p {
+    color: var(--grayWhite);
+}
+.homeInfo .homeSocialCards {
+    position: relative;
+    width: 75%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+.homeSocialCards div {
+    position: relative;
+    width: 15%;
+    height: 50%;
+    margin: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 1.5em;
+    text-decoration: none;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+.homeSocialCards div:hover {
+    cursor: pointer;
+    width: 18%;
+    height: 65%;
+    font-size: 2.25em;
+}
+.homeSocialCards a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.65em;
+    transform: translateZ(50px);
+}
+.mainContainer.light .homeSocialCards a {
+    color: var(--navSkyBlue);
+}
+.mainContainer.dark .homeSocialCards a {
+    color: var(--grayWhite);
+}
+.mainContainer.light .homeSocialCards div:hover a {
+    color: var(--white);
+}
+.homeSocialCards div:hover.instagram {
+    background-color: #e4405f;
+}
+.homeSocialCards div:hover.telegram {
+    background-color: #0088cc;
+}
+.homeSocialCards div:hover.twitter {
+    background-color: #0099ff;
+}
+.twitter {
+    z-index: 1000;
+}
+.homeContactInfo p {
+    font-family: var(--mainEnFont);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(3, 3, 3, 0.25);
+}
+.mainContainer.light .homeContactInfo p {
+    color: var(--grayBlack);
+}
+.mainContainer.dark .homeContactInfo p {
+    color: var(--grayWhite);
+}
+.mainContainer.light .homeContactInfo p::selection {
+    background-color: var(--navSkyBlue);
+    color: var(--grayWhite);
+}
+.mainContainer.dark .homeContactInfo p::selection {
+    background-color: var(--grayWhite);
+    color: var(--grayBlack);
+}
+  /* Home Background Section  */
 .homeContent .homeBackDesign {
     width: 75%;
-    right: 0;
-    background-color: rgba(238, 238, 238, 0.25);
+    height: 100%;
+    left: 0;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-size: cover;
 }
-.homeBackDesign div {
+.homeBackDesign .svgContainer {
+    position: relative;
+    width: 75%;
+    height: 75%;
+    margin: 25px;
+    transform: rotate(180deg);
+}
+.svgContainer img {
+    filter: drop-shadow(-2.5px 2.5px 7.5px rgba(0, 0, 0, 0.5));
+}
+.homeContent .homeBackDesign img {
     width: 100%;
     height: 100%;
-    background-color: rgba(238, 238, 238, 0.25);
+    transform: rotate(180deg);
+}
+.mainContainer.light .svgContainer .light {
+    display: flex;
+}
+.mainContainer.light .svgContainer .dark {
+    display: none;
+}
+.mainContainer.dark .svgContainer .light {
+    display: none;
+}
+.mainContainer.dark .svgContainer .dark {
+    display: flex;
 }
 .sectionsPage {
     min-height: 100vh;

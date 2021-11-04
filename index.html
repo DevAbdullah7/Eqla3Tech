@@ -105,12 +105,42 @@
             </div>
         </div>
         <div class="content">
-            <div class="homePage" id="particles-jfs">
-                <div class="homeContent">
-                    <div class="homeInfo"></div>
+            <div class="homePage" id="home">
+                <div class="homeContent" dir="rtl">
+                    <div class="homeInfo">
+                        <div class="homeLogoImg">
+                            <img class="light" src="./assets/media/logo/logoBlue.png" alt="">
+                            <img class="dark" src="./assets/media/logo/logoWhite.png" alt="">
+                        </div>
+                        <div class="homeInfoTitle">
+                            <h2 dir="ltr">Eqla3 Tech <span>|</span> إقلاع تيك</h2>
+                            <p>موقع الكتروني لنشر مقالات وشروحات تقنية</p>
+                            <p>شروحات <span class="type"></span></p>
+                        </div>
+                        <div class="homeSocialCards">
+                            <div class="instagram">
+                                <a href="https://www.instagram.com/mraziz20000/" target="blanck"><i
+                                        class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="telegram">
+                                <a href="https://t.me/technology_site20" target="blanck"><i class="fa fa-telegram"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                            <div class="twitter">
+                                <a href="https://twitter.com/SiteTechnologys" target="blanck"><i class="fa fa-twitter"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="homeContactInfo">
+                            <p>Eqla3Tech@gmail.com</p>
+                        </div>
+                    </div>
                     <div class="homeBackDesign">
-                        <!-- <img src="./assets/media/1.jpg" alt=""> -->
-                        <div id="particles-js"></div>
+                        <div class="svgContainer">
+                            <img class="light" src="./assets/media/homeLightShape.svg" alt="">
+                            <img class="dark" src="./assets/media/homeDarkShape.svg" alt="">
+                            <!-- <div id="particles-js"></div> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -127,9 +157,22 @@
     </div>
     <!-- Js Files -->
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/jquery-3.6.0.min.js"></script>
-    <script src="./assets/js/particles.js"></script>
-    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/typed.js"></script>
+    <script>
+        var typed = new Typed('.type', {
+            strings: [
+                'تقنية المعلومات',
+                'قواعد البيانات',
+                'الشبكات',
+                '++c',
+                'نظام Windows',
+                'نظام Linux'
+            ],
+            typeSpeed: 60,
+            backSpeed: 60,
+            loop: true
+        });
+    </script>
 </body>
 
 </html>
