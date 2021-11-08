@@ -71,6 +71,14 @@
     }
     .topBar .search input {
     }
+    .topBar .search input::-webkit-input-placeholder {
+    }
+    .topBar .search input::-moz-placeholder {
+    }
+    .topBar .search input:-ms-input-placeholder {
+    }
+    .topBar .search input::-ms-input-placeholder {
+    }
     .topBar .search input::placeholder {
     }
     .topBar .search i {

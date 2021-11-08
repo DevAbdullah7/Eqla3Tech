@@ -1,343 +1,399 @@
 @media only screen and (max-width: 480px){
-        * {
+    * {
+}
+html {
+}
+.body {
+}
+.body.dark {
+}
+.body::after {
+}
+.body.light::after {
+    background: url('../media/backGroundMobile.png');
+    background-size: cover;
+}
+.body.dark::after {
+    background: url('../media/backGroundDarkMobile.png');
+    background-size: cover;
+}
+.body.dark::after {
+}
+    /* ======================================= */
+    /* Navbar */
+    .navContainer {
+        width: 0;
+        border: none !important;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
     }
-    html {
+    .navContainer.activate {
+        width: 90%;
+        border-right: 10px solid var(--navSkyBlue);
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
     }
-    .body {
+    .navContent {
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
     }
-    .body.dark {
+    /* Logo Detailes */
+    .logoInfo {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
     }
-    .body::after {
+    .logoImg {
+        width: 75px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
-    .body.light::after {
-        background: url('../media/backGroundMobile.png');
-        background-size: cover;
+    .logoTitle {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin: 0;
+        letter-spacing: 5px;
     }
-    .body.dark::after {
-        background: url('../media/backGroundDarkMobile.png');
-        background-size: cover;
+    .logoTitle p {
+        margin: 0;
     }
-    .body.dark::after {
+    .navMobileMenu {
+        display: none;
+        width: 40px;
+        height: 25px;
+        margin: auto 10px;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        cursor: pointer;
     }
-        /* ======================================= */
-        /* Navbar */
-        .navContainer {
-            width: 0;
-            border: none !important;
-            transition: 0.5s;
-        }
-        .navContainer.activate {
-            width: 90%;
-            border-right: 10px solid var(--navSkyBlue);
-            transition: 0.5s;
-        }
-        .navContent {
-            transition: 0.5s;
-        }
-        /* Logo Detailes */
-        .logoInfo {
-            flex-direction: row-reverse;
-        }
-        .logoImg {
-            width: 75px;
-            display: flex;
-            justify-content: center;
-        }
-        .logoTitle {
-            display: flex;
-            align-items: center;
-            margin: 0;
-            letter-spacing: 5px;
-        }
-        .logoTitle p {
-            margin: 0;
-        }
-        .navMobileMenu {
-            display: none;
-            width: 40px;
-            height: 25px;
-            margin: auto 10px;
-            justify-content: space-evenly;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        .navContainer.activate .navMobileMenu{
-            display: flex;
-        }
-        .navMobileMenu span {
-            width: 55%;
-            height: 5px;
-            margin: auto;
-            border-radius: 5px;
-            background-color: var(--white);
-        }
-        /* Website Sections */
-        .ulContainer {
-        }
-        .ulContainer ul {
-        }
-        .ulContainer ul li {
-        }
-        .ulContainer ul li.clicked {
-        }
-        .ulContainer ul li a {
-            display: flex;
-            justify-content: flex-start;
-            /* margin-right: 15%; */
-        }
-        .ulContainer ul li.clicked a {
-        }
-        .ulContainer ul li.clicked a::before {
-            /* left: 51px; */
-        }
-        .ulContainer ul li.clicked a::after {
-            /* left: 51px; */
-        }
-        .ulContainer ul li a .icon {
-            margin: 0;
-        }
-        .ulContainer ul li a .fa-file-text {
-            transform: translateX(-5px);
-        }
-        .ulContainer ul li a .title {
-            display: block;
-        }
-        /* Dark Mood Controls */
-        .darkModeContainer {
-            flex-direction: row;
-        }
-        .darkModeContainer div {
-        }
-        .darkModeContainer .light.clicked,
-        .darkModeContainer .dark.clicked {
-        }
-        /* ======================================= */
-        /* Main Content */
-        .mainContainer {
-            width: 100%;
-        }
-        .mainContainer.activate {
-            transform: translateX(-100%);
-            overflow-y: hidden;
-        }
-        /* Top Bar */
-        .mainContainer .topBar {
-            width: 100%;
-            padding: 0 10px;
-        }
-        .topBar .logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .topBar.activate .logo {
-            visibility: hidden;
-        }
-        .mainContainer .topBar .forLightDesktop,
-        .mainContainer .topBar .forDarkDesktop {
-            display: none;
-        }
-        .topBar .forLightMobile,
-        .topBar .forDarkMobile {
-            display: block;
-        }
-        .mainContainer .topBar .forLightMobile {
-            display: block;
-        }
-        .mainContainer.dark .topBar .forLightMobile {
-            display: none;
-        }
-        .mainContainer .topBar .forDarkMobile {
-            display: none;
-        }
-        .mainContainer.dark .topBar .forDarkMobile {
-            display: block;
-        }
-        .mainContainer .topBar .logo img {
-            width: 2.5em;
-            height: 2.5em;
-            margin: 0;
-        }
-        .topBar .search {
-            margin: 0;
-        }
-        .topBar.activate .search {
-            visibility: hidden;
-        }
-        .search .searchContainer {
-        }
-        .topBar .search input {
-            width: 15em;
-        }
-        .topBar .search input::placeholder {
-        }
-        .topBar .search i {
-        }
-        .menuMobile {
-            display: flex;
-            width: 25px;
-            height: 25px;
-        }
-        .mainContainer .topBar .menuMobile span {
-            background-color: var(--navSkyBlue);
-        }
-        .mainContainer .topBar.activate .menuMobile span {
-            background-color: var(--white);
-        }
-        .mainContainer.dark .menuMobile span {
-            background-color: var(--white);
-        }
-        .topBar.activate .menuMobile {
-            display: none;
-        }
-        /* ======================================= */
-        /* Home Page */
-        .homePage,
-    .sectionsPage,
-    .lastNewsPage,
-    .contactPage {
+    .navContainer.activate .navMobileMenu{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
     }
-    .mainContainer.dark .homePage {
-    }
-    #particles-js {
-    }
-    .homeContent {
-        align-items: flex-start;
-    }
-    .homeContent div {
-    }
-
-    /* Home Info Section */
-    .homeContent .homeInfo {
-        width: 100%;
-        height: 75%;
-        justify-content: flex-start;
-    }
-    .homeInfo .homeLogoImg,
-    .homeInfo .homeInfoTitle, 
-    .homeInfo .homeBtns {
-    }
-
-    /* Logo */
-    .mainContainer.light .homeInfo .light {
-    }
-    .mainContainer.light .homeInfo .dark {
-    }
-    .mainContainer.dark .homeInfo .light {
-    }
-    .mainContainer.dark .homeInfo .dark {
-    }
-    .homeInfo .homeLogoImg {
-        height: 20%;
-    }
-    .homeInfo .homeLogoImg img {
+    .navMobileMenu span {
         width: 55%;
+        height: 5px;
+        margin: auto;
+        border-radius: 5px;
+        background-color: var(--white);
     }
-
-    /* Title */
-    .homeInfo .homeInfoTitle {
+    /* Website Sections */
+    .ulContainer {
     }
-    .homeInfoTitle h6 {
-        font-size: 1.75em;
+    .ulContainer ul {
     }
-    .homeInfoTitle .Eng {
+    .ulContainer ul li {
     }
-    .mainContainer.light .homeInfoTitle .Eng {
+    .ulContainer ul li.clicked {
     }
-    .mainContainer.dark .homeInfoTitle .Eng {
+    .ulContainer ul li a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        /* margin-right: 15%; */
     }
-    .mainContainer.light .homeInfoTitle h6 {
+    .ulContainer ul li.clicked a {
     }
-    .mainContainer.dark .homeInfoTitle h6 {
+    .ulContainer ul li.clicked a::before {
+        /* left: 51px; */
     }
-    .mainContainer.light .homeInfoTitle h6 span {
+    .ulContainer ul li.clicked a::after {
+        /* left: 51px; */
     }
-    .mainContainer.dark .homeInfoTitle h6 span {
+    .ulContainer ul li a .icon {
+        margin: 0;
     }
-    .homeInfoTitle p {
-        font-size: 0.95em;
+    .ulContainer ul li a .fa-file-text {
+        -webkit-transform: translateX(-5px);
+            -ms-transform: translateX(-5px);
+                transform: translateX(-5px);
     }
-    .mainContainer.light .homeInfoTitle p {
+    .ulContainer ul li a .title {
+        display: block;
     }
-    .mainContainer.dark .homeInfoTitle p {
+    /* Dark Mood Controls */
+    .darkModeContainer {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
-
-    /* Action Call Btns */
-    .homeInfo .homeBtns {
+    .darkModeContainer div {
+    }
+    .darkModeContainer .light.clicked,
+    .darkModeContainer .dark.clicked {
+    }
+    /* ======================================= */
+    /* Main Content */
+    .mainContainer {
         width: 100%;
     }
-    .homeBtns div {
-        height: 30px;
-        font-size: 1em;
+    .mainContainer.activate {
+        -webkit-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+                transform: translateX(-100%);
+        overflow-y: hidden;
     }
-    .mainContainer.light .homeBtns div {
-        background: var(--navSkyBlue);
-        border: 1px solid var(--navSkyBlue);
-    }
-    .mainContainer.dark .homeBtns div {
-        background: linear-gradient(135deg, rgba(53,53,53,1) 60%, rgba(22,22,22,1) 150%);
-        border: 2px solid #333;
-    }
-    .homeBtns div:hover {
-    }
-    .homeBtns div a {
-    }
-    .homeBtns div:hover a {
-    }
-
-    /* Home Contact Section */
-    .homeContact {
+    /* Top Bar */
+    .mainContainer .topBar {
         width: 100%;
-        bottom: 5%;
-        z-index: 1;
+        padding: 0 10px;
     }
-    .homeContact div {
+    .topBar .logo {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
-    .homeSocialCards {
+    .topBar.activate .logo {
+        visibility: hidden;
     }
-    .mainContainer.light .homeSocialCards div {
-        border: 1px solid var(--grayWhite);
+    .mainContainer .topBar .forLightDesktop,
+    .mainContainer .topBar .forDarkDesktop {
+        display: none;
     }
-    .homeSocialCards div:hover {
+    .topBar .forLightMobile,
+    .topBar .forDarkMobile {
+        display: block;
     }
-    .homeSocialCards a {
+    .mainContainer .topBar .forLightMobile {
+        display: block;
     }
-    .mainContainer.light .homeSocialCards a {
-        color: var(--grayWhite);
+    .mainContainer.dark .topBar .forLightMobile {
+        display: none;
     }
-    .mainContainer.dark .homeSocialCards a {
+    .mainContainer .topBar .forDarkMobile {
+        display: none;
     }
-    .mainContainer.light .homeSocialCards div:hover a {
+    .mainContainer.dark .topBar .forDarkMobile {
+        display: block;
     }
-    .homeSocialCards div:hover.instagram {
+    .mainContainer .topBar .logo img {
+        width: 2.5em;
+        height: 2.5em;
+        margin: 0;
     }
-    .homeSocialCards div:hover.telegram {
+    .topBar .search {
+        margin: 0;
     }
-    .homeSocialCards div:hover.twitter {
+    .topBar.activate .search {
+        visibility: hidden;
     }
-    .twitter {
+    .search .searchContainer {
     }
+    .topBar .search input {
+        width: 15em;
+    }
+    .topBar .search input::-webkit-input-placeholder {
+    }
+    .topBar .search input::-moz-placeholder {
+    }
+    .topBar .search input:-ms-input-placeholder {
+    }
+    .topBar .search input::-ms-input-placeholder {
+    }
+    .topBar .search input::placeholder {
+    }
+    .topBar .search i {
+    }
+    .menuMobile {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 25px;
+        height: 25px;
+    }
+    .mainContainer .topBar .menuMobile span {
+        background-color: var(--navSkyBlue);
+    }
+    .mainContainer .topBar.activate .menuMobile span {
+        background-color: var(--white);
+    }
+    .mainContainer.dark .menuMobile span {
+        background-color: var(--white);
+    }
+    .topBar.activate .menuMobile {
+        display: none;
+    }
+    /* ======================================= */
+    /* Home Page */
+    .homePage,
+.sectionsPage,
+.lastNewsPage,
+.contactPage {
+}
+.mainContainer.dark .homePage {
+}
+#particles-js {
+}
+.homeContent {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+}
+.homeContent div {
+}
 
-    /* Home Background Section  */
-    .homeContent .homeBackDesign {
-        width: 85%;
-    }
-    .homeBackDesign .svgContainer {
-        width: 80%;
-        height: 65%;
-    }
-    .svgContainer img {
-    }
-    .homeContent .homeBackDesign img {
-    }
-    .mainContainer.light .svgContainer .light {
-    }
-    .mainContainer.light .svgContainer .dark {
-    }
-    .mainContainer.dark .svgContainer .light {
-    }
-    .mainContainer.dark .svgContainer .dark {
-    }
-    .sectionsPage {
-    }
+/* Home Info Section */
+.homeContent .homeInfo {
+    width: 100%;
+    height: 75%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+}
+.homeInfo .homeLogoImg,
+.homeInfo .homeInfoTitle, 
+.homeInfo .homeBtns {
+}
+
+/* Logo */
+.mainContainer.light .homeInfo .light {
+}
+.mainContainer.light .homeInfo .dark {
+}
+.mainContainer.dark .homeInfo .light {
+}
+.mainContainer.dark .homeInfo .dark {
+}
+.homeInfo .homeLogoImg {
+    height: 20%;
+}
+.homeInfo .homeLogoImg img {
+    width: 55%;
+}
+
+/* Title */
+.homeInfo .homeInfoTitle {
+}
+.homeInfoTitle h6 {
+    font-size: 1.75em;
+}
+.homeInfoTitle .Eng {
+}
+.mainContainer.light .homeInfoTitle .Eng {
+}
+.mainContainer.dark .homeInfoTitle .Eng {
+}
+.mainContainer.light .homeInfoTitle h6 {
+}
+.mainContainer.dark .homeInfoTitle h6 {
+}
+.mainContainer.light .homeInfoTitle h6 span {
+}
+.mainContainer.dark .homeInfoTitle h6 span {
+}
+.homeInfoTitle p {
+    font-size: 0.95em;
+}
+.mainContainer.light .homeInfoTitle p {
+}
+.mainContainer.dark .homeInfoTitle p {
+}
+
+/* Action Call Btns */
+.homeInfo .homeBtns {
+    width: 100%;
+}
+.homeBtns div {
+    height: 30px;
+    font-size: 1em;
+}
+.mainContainer.light .homeBtns div {
+    background: var(--navSkyBlue);
+    border: 1px solid var(--navSkyBlue);
+}
+.mainContainer.dark .homeBtns div {
+    background: -o-linear-gradient(315deg, rgba(53,53,53,1) 60%, rgba(22,22,22,1) 150%);
+    background: linear-gradient(135deg, rgba(53,53,53,1) 60%, rgba(22,22,22,1) 150%);
+    border: 2px solid #333;
+}
+.homeBtns div:hover {
+}
+.homeBtns div a {
+}
+.homeBtns div:hover a {
+}
+
+/* Home Contact Section */
+.homeContact {
+    width: 100%;
+    bottom: 5%;
+    z-index: 1;
+}
+.homeContact div {
+}
+.homeSocialCards {
+}
+.mainContainer.light .homeSocialCards div {
+    border: 1px solid var(--grayWhite);
+}
+.homeSocialCards div:hover {
+}
+.homeSocialCards a {
+}
+.mainContainer.light .homeSocialCards a {
+    color: var(--grayWhite);
+}
+.mainContainer.dark .homeSocialCards a {
+}
+.mainContainer.light .homeSocialCards div:hover a {
+}
+.homeSocialCards div:hover.instagram {
+}
+.homeSocialCards div:hover.telegram {
+}
+.homeSocialCards div:hover.twitter {
+}
+.twitter {
+}
+
+/* Home Background Section  */
+.homeContent .homeBackDesign {
+    width: 85%;
+}
+.homeBackDesign .svgContainer {
+    width: 80%;
+    height: 65%;
+}
+.svgContainer img {
+}
+.homeContent .homeBackDesign img {
+}
+.mainContainer.light .svgContainer .light {
+}
+.mainContainer.light .svgContainer .dark {
+}
+.mainContainer.dark .svgContainer .light {
+}
+.mainContainer.dark .svgContainer .dark {
+}
+.sectionsPage {
+}
 }
