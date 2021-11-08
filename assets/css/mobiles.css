@@ -207,7 +207,6 @@
         width: 100%;
         height: 75%;
         justify-content: flex-start;
-        transform: translateY(5%);
     }
     .homeInfo .homeLogoImg,
     .homeInfo .homeInfoTitle, 
@@ -307,7 +306,8 @@
 
     /* Home Background Section  */
     .homeContent .homeBackDesign {
-        width: 100%;
+        width: 85%;
+        height: 85%;
     }
     .homeBackDesign .svgContainer {
         width: 80%;
