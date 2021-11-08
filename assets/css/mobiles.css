@@ -14,6 +14,10 @@
         background-size: cover;
     }
     .body.dark::after {
+        background: url('../media/backGroundDarkMobile.png');
+        background-size: cover;
+    }
+    .body.dark::after {
     }
         /* ======================================= */
         /* Navbar */

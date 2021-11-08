@@ -518,9 +518,15 @@ html {
     font-family: var(--mainArFont);
     font-size: 1.25em;
     border-radius: 25px;
+    transition: 0.5s;
+}
+.mainContainer.light .homeBtns div {
     background-color: var(--navSkyBlue);
     border: 2px solid var(--navSkyBlue);
-    transition: 0.5s;
+}
+.mainContainer.dark .homeBtns div {
+    background-color: #222;
+    border: 2px solid #333;
 }
 .homeBtns div:hover {
     cursor: pointer;
