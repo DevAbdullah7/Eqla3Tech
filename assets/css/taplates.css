@@ -3,29 +3,50 @@
     }
     html {
     }
-    body {
+    .body {
+    }
+    .body.dark {
+    }
+    .body::after {
+    }
+    .body.light::after {
+        background: url('../media/backGroundLaptop.png');
+        background-size: cover;
+    }
+    .body.dark::after {
     }
     /* ======================================= */
+
     /* Navbar */
     .navContainer {
         width: 10%;
-        border: none !important;
+        border: none;
+    }
+    .navContainer.dark {
+        border: none;
     }
     .navContent {
     }
     /* Logo Detailes */
     .logoInfo {
+        justify-content: center;
     }
     .logoImg {
-        margin: 10px auto;
+        display: block;
     }
     .logoImg img {
-        display: block;
-        width: 2.75em;
-        height: 2.75em;
     }
     .logoTitle {
         display: none;
+    }
+    .logoTitle p {
+        font-size: 0.75em;
+    }
+    .navMobileMenu {
+    }
+    .navMobileMenu.activate{
+    }
+    .navMobileMenu span {
     }
     /* Website Sections */
     .ulContainer {
@@ -33,21 +54,36 @@
     .ulContainer ul {
     }
     .ulContainer ul li {
+        padding-right: 5px;
+    }
+    .navContainer.dark .ulContainer ul li {
     }
     .ulContainer ul li.clicked {
     }
+    .navContainer.dark .ulContainer ul li.clicked {
+    }
     .ulContainer ul li a {
+        justify-content: center;
     }
     .ulContainer ul li.clicked a {
         padding: 0;
+    }
+    .navContainer.dark .ulContainer ul li.clicked a {
     }
     .ulContainer ul li.clicked a::before {
     }
     .ulContainer ul li.clicked a::after {
     }
+    .navContainer.dark .ulContainer ul li.clicked a::before {
+    }
+    .navContainer.dark .ulContainer ul li.clicked a::after {
+    }
     .ulContainer ul li a .icon {
-        margin: auto;
-        z-index: 1000;
+        min-width: 35px;
+        font-size: 1.5em;
+    }
+    .ulContainer ul li.clicked a .icon {
+        font-size: 1.75em;
     }
     .ulContainer ul li a .fa-home {
     }
@@ -56,48 +92,194 @@
     }
     /* Dark Mood Controls */
     .darkModeContainer {
+        transform: none;
         flex-direction: column;
-        align-items: center;
-        transform: translateX(0);
     }
     .darkModeContainer div {
-        width: 1.75em;
-        height: 1.75em;
     }
-    .darkModeContainer .light.clicked,
-    .darkModeContainer .dark.clicked {
+    .darkModeContainer .clicked {
     }
     /* ======================================= */
+
     /* Main Content */
     .mainContainer {
         width: 90%;
     }
     /* Top Bar */
     .topBar {
-        width: 90%;
     }
-    .topBar .logo {
-        display: none;
+    .mainContainer .topBar {
     }
-    .topBar .forMobileLight {
-        display: none;
+    .mainContainer.dark .topBar {
+    }
+    .mainContainer .topBar.activate {
+    }
+    .mainContainer .forLightDesktop {
+    }
+    .mainContainer.dark .forLightDesktop {
+    }
+    .mainContainer .forDarkDesktop {
+    }
+    .mainContainer.dark .forDarkDesktop {
+    }
+    .mainContainer .topBar .logo img {
+    }
+    .topBar .forLightMobile,
+    .topBar .forDarkMobile {
     }
     .topBar .search {
     }
     .search .searchContainer {
     }
     .topBar .search input {
-        width: 25em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: translateX(0);
-        margin: 0 auto;
     }
     .topBar .search input::placeholder {
     }
     .topBar .search i {
-        left: 0.5em;
-        top: 10px;
+    }
+    .topBar .search input[type='submit'] {
+    }
+    .menuMobile {
+    }
+    .menuMobile.activate{
+    }
+    .menuMobile span {
+    }
+    /* ======================================= */
+
+    /* Website Content */
+    /* Home */
+    .homePage,
+    .sectionsPage,
+    .lastNewsPage,
+    .contactPage {
+    }
+    .mainContainer.dark .homePage {
+    }
+    #particles-js {
+    }
+    .homeContent {
+    }
+    .homeContent div {
+    }
+
+    /* Home Info Section */
+    .homeContent .homeInfo {
+        width: 100%;
+        height: 80%;
+        justify-content: flex-start;
+    }
+    .homeInfo .homeLogoImg,
+    .homeInfo .homeInfoTitle, 
+    .homeInfo .homeBtns {
+    }
+
+    /* Logo */
+    .mainContainer.light .homeInfo .light {
+    }
+    .mainContainer.light .homeInfo .dark {
+    }
+    .mainContainer.dark .homeInfo .light {
+    }
+    .mainContainer.dark .homeInfo .dark {
+    }
+    .homeInfo .homeLogoImg {
+        height: 15%;
+    }
+    .homeInfo .homeLogoImg img {
+    }
+
+    /* Title */
+    .homeInfo .homeInfoTitle {
+    }
+    .homeInfoTitle h6 {
+        font-size: 2.5em;
+    }
+    .homeInfoTitle .Eng {
+    }
+    .mainContainer.light .homeInfoTitle .Eng {
+    }
+    .mainContainer.dark .homeInfoTitle .Eng {
+    }
+    .mainContainer.light .homeInfoTitle h6 {
+    }
+    .mainContainer.dark .homeInfoTitle h6 {
+    }
+    .mainContainer.light .homeInfoTitle h6 span {
+    }
+    .mainContainer.dark .homeInfoTitle h6 span {
+    }
+    .homeInfoTitle p {
+        font-size: 1.5em;
+    }
+    .mainContainer.light .homeInfoTitle p {
+    }
+    .mainContainer.dark .homeInfoTitle p {
+    }
+
+    /* Action Call Btns */
+    .homeInfo .homeBtns {
+        height: 15%;
+    }
+    .homeBtns div {
+    }
+    .homeBtns div:hover {
+    }
+    .homeBtns div a {
+    }
+    .homeBtns div:hover a {
+    }
+
+    /* Home Contact Section */
+    .homeContact {
+        width: 37%;
+    }
+    .homeContact div {
+    }
+    .homeSocialCards {
+    }
+    .homeSocialCards div {
+        border: 1px solid var(--grayWhite);
+    }
+    .homeSocialCards div:hover {
+    }
+    .homeSocialCards a {
+    }
+    .mainContainer.light .homeSocialCards a {
+        color: var(--grayWhite);
+    }
+    .mainContainer.dark .homeSocialCards a {
+    }
+    .mainContainer.light .homeSocialCards div:hover a {
+    }
+    .homeSocialCards div:hover.instagram {
+    }
+    .homeSocialCards div:hover.telegram {
+    }
+    .homeSocialCards div:hover.twitter {
+    }
+    .twitter {
+    }
+
+    /* Home Background Section  */
+    .homeContent .homeBackDesign {
+    }
+    .homeBackDesign .svgContainer {
+        width: 80%;
+        height: 45%;
+    }
+    .svgContainer img {
+    }
+    .homeContent .homeBackDesign img {
+    }
+    .mainContainer.light .svgContainer .light {
+    }
+    .mainContainer.light .svgContainer .dark {
+    }
+    .mainContainer.dark .svgContainer .light {
+    }
+    .mainContainer.dark .svgContainer .dark {
+    }
+    .sectionsPage {
     }
 }

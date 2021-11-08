@@ -6,8 +6,8 @@
     /* fonts */
     --mainArFont: 'Tajawal', sans-serif;
     --mainEnFont: 'Reem Kufi', sans-serif; 
-    --logoFont: 'ZCOOL QingKe HuangYou', cursive;
     --secondEngFont: 'Poiret One', cursive;
+    --logoFont: 'ZCOOL QingKe HuangYou', cursive;
 
     /* colors */
     --white: #fff;
@@ -42,17 +42,17 @@ html {
 .body::after {
     position: fixed;
     content: '';
-    width: 70%;
-    height: 95%;
-    bottom: -20%;
-    left: -7.5%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 1;
     z-index: -1;
 }
 .body.light::after {
-    background: url('../media/backLight.svg');
+    background: url('../media/backGround.png');
 }
 .body.dark::after {
     background: url('../media/backDark.svg');
@@ -62,7 +62,7 @@ html {
 /* Navbar */
 .navContainer {
     position: fixed;
-    width: 20%;
+    width: 15%;
     height: 100%;
     right: 0;
     background-color: var(--navSkyBlue);
@@ -225,7 +225,7 @@ html {
     transition: 0.5s;
 }
 .ulContainer ul li a .fa-home {
-    font-size: 1.9em;
+    /* font-size: 1.9em; */
 }
 .ulContainer ul li a .title {
     position: relative;
@@ -268,7 +268,7 @@ html {
 /* Main Content */
 .mainContainer {
     position: relative;
-    width: 80%;
+    width: 85%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -417,20 +417,18 @@ html {
 
 /* Home Info Section */
 .homeContent .homeInfo {
-    width: 45%;
+    width: 50%;
     height: 75%;
     right: 0;
     flex-direction: column;
     margin-bottom: 10%;
+    z-index: 1;
 }
 .homeInfo .homeLogoImg,
 .homeInfo .homeInfoTitle, 
-.homeInfo .homeSocialCards,
-.homeInfo .homeContactInfo {
+.homeInfo .homeBtns {
     position: relative;
     width: 75%;
-    /* height: 20%; */
-    /* background-color: rgba(255, 255, 255, 0.5); */
 }
 
 /* Logo */
@@ -459,7 +457,6 @@ html {
 /* Title */
 .homeInfo .homeInfoTitle {
     width: 75%;
-    /* height: 40%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -469,25 +466,37 @@ html {
     font-family: var(--mainArFont);
     user-select: none;
 }
-.homeInfoTitle h2 {
+.homeInfoTitle h6 {
     margin: 25px auto;
-    font-size: 2.5em;
+    font-size: 2.90em;
+    font-weight: 500;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
 }
-.mainContainer.light .homeInfoTitle h2 {
+.homeInfoTitle .Eng {
+    font-weight: bold;
+}
+.mainContainer.light .homeInfoTitle .Eng {
+    font-family: var(--secondEngFont);
     color: var(--grayBlack);
 }
-.mainContainer.dark .homeInfoTitle h2 {
+.mainContainer.dark .homeInfoTitle .Eng {
+    font-family: var(--secondEngFont);
     color: var(--grayWhite);
 }
-.mainContainer.light .homeInfoTitle h2 span {
+.mainContainer.light .homeInfoTitle h6 {
+    color: var(--grayBlack);
+}
+.mainContainer.dark .homeInfoTitle h6 {
+    color: var(--grayWhite);
+}
+.mainContainer.light .homeInfoTitle h6 span {
     color: var(--navSkyBlue);
 }
-.mainContainer.dark .homeInfoTitle h2 span {
+.mainContainer.dark .homeInfoTitle h6 span {
     color: #222;
 }
 .homeInfoTitle p {
-    font-size: 20px;
+    font-size: 2em;
     text-shadow: 0 0 5px rgba(3, 3, 3, 0.25);
 }
 .mainContainer.light .homeInfoTitle p {
@@ -496,45 +505,86 @@ html {
 .mainContainer.dark .homeInfoTitle p {
     color: var(--grayWhite);
 }
-.homeInfo .homeSocialCards {
-    position: relative;
-    width: 75%;
+
+/* Action Call Btns */
+.homeInfo .homeBtns {
     height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.homeBtns div {
+    position: relative;
+    width: 30%;
+    height: 35%;
+    margin: 1%;
+    font-family: var(--mainArFont);
+    font-size: 1.25em;
+    border-radius: 25px;
+    background-color: var(--navSkyBlue);
+    border: 2px solid var(--navSkyBlue);
+    transition: 0.5s;
+}
+.homeBtns div:hover {
+    cursor: pointer;
+    background-color: var(--grayWhite);
+}
+.homeBtns div a {
+    text-decoration: none;
+    color: var(--grayWhite);
+}
+.homeBtns div:hover a {
+    color: var(--navSkyBlue);
+}
+
+/* Home Contact Section */
+.homeContact {
+    width: 25%;
+    height: 25%;
+    bottom: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: flex-end !important;
+}
+.homeContact div {
+    position: relative;
+}
+.homeSocialCards {
+    position: relative;
+    width: 85%;
+    height: 50%;
+    margin-bottom: 20px;
+    align-items: flex-end !important;
     opacity: 1;
 }
 .homeSocialCards div {
     position: relative;
-    width: 15%;
-    height: 50%;
+    width: 50px;
+    height: 50px;
     margin: 0 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    font-size: 1.5em;
+    border-radius: 15px;
+    font-size: 1em;
     text-decoration: none;
     transform-style: preserve-3d;
     perspective: 500px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--navSkyBlue);
     transition: 0.5s;
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
 }
 .homeSocialCards div:hover {
     cursor: pointer;
-    width: 18%;
-    height: 65%;
-    font-size: 2.25em;
+    width: 55px;
+    height: 55px;
+    border: none;
+    font-size: 1.25em;
 }
 .homeSocialCards a {
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 1.65em;
+    font-size: 1.5em;
     transform: translateZ(50px);
 }
 .mainContainer.light .homeSocialCards a {
@@ -558,27 +608,7 @@ html {
 .twitter {
     z-index: 1000;
 }
-.homeContactInfo p {
-    font-family: var(--mainEnFont);
-    font-weight: 500;
-    font-size: 18px;
-    letter-spacing: 1px;
-    text-shadow: 0 0 5px rgba(3, 3, 3, 0.25);
-}
-.mainContainer.light .homeContactInfo p {
-    color: var(--grayBlack);
-}
-.mainContainer.dark .homeContactInfo p {
-    color: var(--grayWhite);
-}
-.mainContainer.light .homeContactInfo p::selection {
-    background-color: var(--navSkyBlue);
-    color: var(--grayWhite);
-}
-.mainContainer.dark .homeContactInfo p::selection {
-    background-color: var(--grayWhite);
-    color: var(--grayBlack);
-}
+
   /* Home Background Section  */
 .homeContent .homeBackDesign {
     width: 75%;
@@ -590,8 +620,8 @@ html {
 }
 .homeBackDesign .svgContainer {
     position: relative;
-    width: 75%;
-    height: 75%;
+    width: 70%;
+    height: 70%;
     margin: 25px;
     transform: rotate(180deg);
 }

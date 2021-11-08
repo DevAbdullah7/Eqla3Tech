@@ -37,6 +37,9 @@
     }
     .ulContainer ul li a .icon {
     }
+    .ulContainer ul li.clicked a .icon {
+        
+    }
     .ulContainer ul li a .fa-home {
     }
     .ulContainer ul li a .title {
