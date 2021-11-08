@@ -264,11 +264,19 @@
 
     /* Action Call Btns */
     .homeInfo .homeBtns {
-        height: 15%;
         width: 100%;
     }
     .homeBtns div {
+        height: 30px;
         font-size: 1em;
+    }
+    .mainContainer.light .homeBtns div {
+        background: var(--navSkyBlue);
+        border: 1px solid var(--navSkyBlue);
+    }
+    .mainContainer.dark .homeBtns div {
+        background: linear-gradient(135deg, rgba(53,53,53,1) 60%, rgba(22,22,22,1) 150%);
+        border: 2px solid #333;
     }
     .homeBtns div:hover {
     }
@@ -287,7 +295,7 @@
     }
     .homeSocialCards {
     }
-    .homeSocialCards div {
+    .mainContainer.light .homeSocialCards div {
         border: 1px solid var(--grayWhite);
     }
     .homeSocialCards div:hover {

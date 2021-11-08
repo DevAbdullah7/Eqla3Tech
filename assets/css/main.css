@@ -50,12 +50,13 @@ html {
     background-repeat: no-repeat;
     opacity: 1;
     z-index: -1;
+    transition: 0.25s;
 }
 .body.light::after {
     background: url('../media/backGround.png');
 }
 .body.dark::after {
-    background: url('../media/backDark.svg');
+    background: url('../media/backGroundDark.png');
 }
 /* ======================================= */
 
@@ -510,8 +511,8 @@ html {
 .homeBtns div {
     position: relative;
     width: 30%;
-    height: 30px;
-    margin: 1%;
+    height: 50px;
+    margin: 5% 1%;
     font-family: var(--mainArFont);
     font-size: 1.25em;
     border-radius: 25px;
@@ -519,12 +520,11 @@ html {
     transition: 0.5s;
 }
 .mainContainer.light .homeBtns div {
-    background: linear-gradient(135deg, rgba(238,238,238,1) 65%, rgba(40,120,250,1) 150%);
-    /* background-color: var(--navSkyBlue); */
+    background: var(--navSkyBlue);
     border: 1px solid var(--navSkyBlue);
 }
 .mainContainer.dark .homeBtns div {
-    background-color: #222;
+    background: linear-gradient(135deg, rgba(33,33,33,1) 0.5%, rgba(22,22,22,1) 150%);
     border: 2px solid #333;
 }
 .homeBtns div:hover {
@@ -533,8 +533,13 @@ html {
 }
 .homeBtns div a {
     text-decoration: none;
-    color: var(--navSkyBlue);
     text-shadow: 0 0 2.5px rgba(0, 0, 0, 0.25);
+}
+.mainContainer.light .homeBtns div a {
+    color: var(--grayWhite);
+}
+.mainContainer.dark .homeBtns div a {
+    color: var(--grayWhite);
 }
 .homeBtns div:hover a {
     color: var(--navSkyBlue);
@@ -572,10 +577,15 @@ html {
     text-decoration: none;
     transform-style: preserve-3d;
     perspective: 500px;
-    border: 2px solid var(--navSkyBlue);
     transition: 0.5s;
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
+}
+.mainContainer.light .homeSocialCards div {
+    border: 1px solid var(--navSkyBlue);
+}
+.mainContainer.dark .homeSocialCards div {
+    border: 1px solid var(--grayWhite);
 }
 .homeSocialCards div:hover {
     cursor: pointer;

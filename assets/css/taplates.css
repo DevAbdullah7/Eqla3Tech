@@ -10,10 +10,12 @@
     .body::after {
     }
     .body.light::after {
-        background: url('../media/backGroundLaptop.png');
+        background: url('../media/backGroundTaplate.png');
         background-size: cover;
     }
     .body.dark::after {
+        background: url('../media/backGroundDarkTaplate.png');
+        background-size: cover;
     }
     /* ======================================= */
 
