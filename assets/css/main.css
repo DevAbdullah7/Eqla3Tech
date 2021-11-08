@@ -515,11 +515,13 @@ html {
     font-family: var(--mainArFont);
     font-size: 1.25em;
     border-radius: 25px;
+    box-shadow: 0 0 15px 2.5px rgba(0, 0, 0, 0.25);
     transition: 0.5s;
 }
 .mainContainer.light .homeBtns div {
-    background-color: var(--navSkyBlue);
-    border: 2px solid var(--navSkyBlue);
+    background: linear-gradient(135deg, rgba(238,238,238,1) 0.01%, rgba(40,120,250,1) 100%);
+    /* background-color: var(--navSkyBlue); */
+    border: 1px solid var(--navSkyBlue);
 }
 .mainContainer.dark .homeBtns div {
     background-color: #222;
@@ -532,6 +534,7 @@ html {
 .homeBtns div a {
     text-decoration: none;
     color: var(--grayWhite);
+    text-shadow: 0 0 2.5px rgba(0, 0, 0, 0.75);
 }
 .homeBtns div:hover a {
     color: var(--navSkyBlue);
