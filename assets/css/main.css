@@ -418,7 +418,6 @@ html {
 /* Home Info Section */
 .homeContent .homeInfo {
     width: 50%;
-    height: 75%;
     right: 0;
     flex-direction: column;
     margin-bottom: 10%;
@@ -445,7 +444,6 @@ html {
     display: flex;
 }
 .homeInfo .homeLogoImg {
-    height: 20%;
     display: flex;
     align-items: flex-end;
     user-select: none;
@@ -508,12 +506,11 @@ html {
 
 /* Action Call Btns */
 .homeInfo .homeBtns {
-    height: 20%;
 }
 .homeBtns div {
     position: relative;
     width: 30%;
-    height: 35%;
+    height: 30px;
     margin: 1%;
     font-family: var(--mainArFont);
     font-size: 1.25em;
@@ -543,7 +540,6 @@ html {
 /* Home Contact Section */
 .homeContact {
     width: 25%;
-    height: 25%;
     bottom: 0;
     right: 0;
     flex-direction: column;

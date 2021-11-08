@@ -313,11 +313,10 @@
     /* Home Background Section  */
     .homeContent .homeBackDesign {
         width: 85%;
-        height: 85%;
     }
     .homeBackDesign .svgContainer {
         width: 80%;
-        height: 45%;
+        height: 65%;
     }
     .svgContainer img {
     }
