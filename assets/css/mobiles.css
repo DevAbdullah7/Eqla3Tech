@@ -198,6 +198,7 @@
     #particles-js {
     }
     .homeContent {
+        align-items: flex-start;
     }
     .homeContent div {
     }
@@ -223,7 +224,7 @@
     .mainContainer.dark .homeInfo .dark {
     }
     .homeInfo .homeLogoImg {
-        height: 10%;
+        height: 20%;
     }
     .homeInfo .homeLogoImg img {
         width: 55%;
@@ -275,6 +276,7 @@
     /* Home Contact Section */
     .homeContact {
         width: 100%;
+        bottom: 5%;
         z-index: 1;
     }
     .homeContact div {
