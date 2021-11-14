@@ -77,6 +77,29 @@ navMobileMenu.onclick = function () {
 //     let height = window.innerHeight;
 // }
 window.addEventListener('scroll', function () {
+    if (window.innerWidth < 480) {
+        if (scrollY < 812) {
+            sections.classList.remove('clicked');
+            lastNews.classList.remove('clicked');
+            contact.classList.remove('clicked');
+            home.classList.add('clicked');
+        } else if (scrollY < 1624) {
+            home.classList.remove('clicked');
+            lastNews.classList.remove('clicked');
+            contact.classList.remove('clicked');
+            sections.classList.add('clicked');
+        } else if (scrollY < 2436) {
+            home.classList.remove('clicked');
+            sections.classList.remove('clicked');
+            contact.classList.remove('clicked');
+            lastNews.classList.add('clicked');
+        } else {
+            home.classList.remove('clicked');
+            sections.classList.remove('clicked');
+            lastNews.classList.remove('clicked');
+            contact.classList.add('clicked');
+        }
+    }
     if (window.innerWidth > 480) {
         if (scrollY < 900) {
             sections.classList.remove('clicked');
@@ -140,3 +163,33 @@ light.onclick = function () {
 dark.onclick = function () {
     darkMood();
 }
+let sectionsItems = document.querySelectorAll('.section');
+let date = new Date()
+let timeNow = document.querySelector('.dateTime .time')
+let dateNow = document.querySelector('.dateTime .date')
+dateNow.innerHTML = (String(date.getDate()) + '/' + String(date.getMonth()) + '/' + String(date.getFullYear()));
+let hourNow = 0;
+let amPm = '';
+if (date.getHours() !== 0) {
+    if (date.getHours() > 12) {
+        hourNow = date.getHours() - 12;
+        amPm = 'pm'
+    } else {
+        hourNow = date.getHours();
+        amPm = 'am'
+    }
+} else {
+    hourNow = 12;
+    amPm = 'am'
+}
+let mintNow = '0';
+if (date.getMinutes() < 10) {
+    mintNow += String(date.getMinutes())
+} else {
+    mintNow = String(date.getMinutes())
+}
+timeNow.innerHTML = `${String(hourNow)}:${String(mintNow)} ${amPm}`;
+window.setInterval(function () {
+    window.location.reload();
+}, 60000);
+document.querySelector('.sectionContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3)}, 375px)`

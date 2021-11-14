@@ -39,7 +39,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/media/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="./assets/media/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/media/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="./assets/media/favicon//manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -53,7 +53,7 @@
                     <a href="#home"><img src="./assets/media/logo/logoWhiteWithOutText.png" alt=""></a>
                 </div>
                 <div class="logoTitle">
-                    <p>Eqla3 Tech</p>
+                    <a href="#home">Eqla3 Tech</a>
                 </div>
                 <div class="navMobileMenu">
                     <span></span>
@@ -137,8 +137,8 @@
                             <p>شروحات <span class="type"></span></p>
                         </div>
                         <div class="homeBtns">
-                            <div class="sectionsBtn"><a href="#sections">الشروحات</a></div>
-                            <div class="lastNewsBtn"><a href="#lastNews">اخر الاخبار</a></div>
+                            <a href="#sections" class="sectionsBtn">الاقسام</a>
+                            <a href="#lastNews" class="lastNewsBtn">اخر الاخبار</a>
                         </div>
                     </div>
                     <div class="homeContact">
@@ -167,7 +167,83 @@
                 </div>
             </div>
             <div class="sectionsPage" id="sections">
-
+                <div class="sectionsContent" dir="rtl">
+                    <h3>الاقسام</h3>
+                    <div class="sectionContainer">
+                        <div class="section it">
+                            <div class="shap">
+                                <i class="fa fa-microchip" aria-hidden="true"></i>
+                            </div>
+                            <div class="description">
+                                <p class="sectionTitle">تقنية المعلومات</p>
+                                <p class="sectionDescription">كل مايخص تقنية المعلومات تجده هنا</p>
+                            </div>
+                            <div class="actionCallBtn">
+                                <a href="pages/IT/informationTech.html">تصفح المواضيع</a>
+                            </div>
+                        </div>
+                        <div class="section db">
+                            <div class="shap">
+                                <i class="fa fa-database" aria-hidden="true"></i>
+                            </div>
+                            <div class="description">
+                                <p class="sectionTitle">قواعد البيانات</p>
+                                <p class="sectionDescription">كل مايخص قواعد البيانات تجده هنا</p>
+                            </div>
+                            <div class="actionCallBtn">
+                                <a href="pages/database/database.html">تصفح المواضيع</a>
+                            </div>
+                        </div>
+                        <div class="section c++ cpp">
+                            <div class="shap">
+                                <i class="fa fa-code" aria-hidden="true"></i>
+                            </div>
+                            <div class="description">
+                                <p class="sectionTitle">++C</p>
+                                <p class="sectionDescription">كل مايخص لغة البرمجة ++C تجده هنا</p>
+                            </div>
+                            <div class="actionCallBtn">
+                                <a href="pages/c++/c++.html">تصفح المواضيع</a>
+                            </div>
+                        </div>
+                        <div class="section win">
+                            <div class="shap">
+                                <i class="fa fa-windows" aria-hidden="true"></i>
+                            </div>
+                            <div class="description">
+                                <p class="sectionTitle">Windows</p>
+                                <p class="sectionDescription">كل مايخص نظام التشغيل Windows تجده هنا</p>
+                            </div>
+                            <div class="actionCallBtn">
+                                <a href="pages/windows/windows.html">تصفح المواضيع</a>
+                            </div>
+                        </div>
+                        <div class="section lin">
+                            <div class="shap">
+                                <i class="fa fa-linux" aria-hidden="true"></i>
+                            </div>
+                            <div class="description">
+                                <p class="sectionTitle">Linux</p>
+                                <p class="sectionDescription">كل مايخص نظام التشغيل Linux تجده هنا</p>
+                            </div>
+                            <div class="actionCallBtn">
+                                <a href="pages/linux/linux.html">تصفح المواضيع</a>
+                            </div>
+                        </div>
+                        <div class="section net">
+                            <div class="shap">
+                                <i class="fa fa-server" aria-hidden="true"></i>
+                            </div>
+                            <div class="description">
+                                <p class="sectionTitle">Networks</p>
+                                <p class="sectionDescription">كل مايخص الشبكات تجده هنا</p>
+                            </div>
+                            <div class="actionCallBtn">
+                                <a href="pages/networks/networks.html">تصفح المواضيع</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="lastNewsPage" id="lastNews">
 
@@ -176,6 +252,10 @@
 
             </div>
         </div>
+    </div>
+    <div class="dateTime">
+        <div class="date"></div>
+        <div class="time"></div>
     </div>
     <!-- Js Files -->
     <script src="./assets/js/main.js"></script>

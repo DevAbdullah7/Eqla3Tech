@@ -1,22 +1,47 @@
-@media only screen and (min-width: 1025px){
+@media only screen and (max-width: 1500px){
     * {
     }
     html {
     }
-    body {
+    .body {
+    }
+    .body.dark {
+    }
+    .body::after {
+    }
+    .body.light::after {
+    }
+    .body.dark::after {
     }
     /* ======================================= */
+
     /* Navbar */
     .navContainer {
+    }
+    .navContainer.dark {
     }
     .navContent {
     }
     /* Logo Detailes */
     .logoInfo {
+        margin-top: 15px;
+    }
+    .logoImg {
+        display: none;
     }
     .logoImg img {
     }
     .logoTitle {
+        display: block;
+    }
+    .logoTitle p {
+        /* font-size: 0.75em; */
+    }
+    .navMobileMenu {
+    }
+    .navMobileMenu.activate{
+    }
+    .navMobileMenu span {
     }
     /* Website Sections */
     .ulContainer {
@@ -25,20 +50,32 @@
     }
     .ulContainer ul li {
     }
+    .navContainer.dark .ulContainer ul li {
+    }
     .ulContainer ul li.clicked {
+    }
+    .navContainer.dark .ulContainer ul li.clicked {
     }
     .ulContainer ul li a {
     }
     .ulContainer ul li.clicked a {
     }
+    .navContainer.dark .ulContainer ul li.clicked a {
+    }
     .ulContainer ul li.clicked a::before {
     }
     .ulContainer ul li.clicked a::after {
     }
+    .navContainer.dark .ulContainer ul li.clicked a::before {
+    }
+    .navContainer.dark .ulContainer ul li.clicked a::after {
+    }
     .ulContainer ul li a .icon {
+        min-width: 35px;
+        font-size: 1.5em;
     }
     .ulContainer ul li.clicked a .icon {
-        
+        font-size: 1.75em;
     }
     .ulContainer ul li a .fa-home {
     }
@@ -49,21 +86,34 @@
     }
     .darkModeContainer div {
     }
-    .darkModeContainer .light.clicked,
-    .darkModeContainer .dark.clicked {
+    .darkModeContainer .clicked {
     }
     /* ======================================= */
+
     /* Main Content */
     .mainContainer {
     }
     /* Top Bar */
     .topBar {
     }
-    .topBar img {
+    .mainContainer .topBar {
     }
-    .topBar .forMobileLight img,
-    .topBar .forMobileDark img {
-        display: none;
+    .mainContainer.dark .topBar {
+    }
+    .mainContainer .topBar.activate {
+    }
+    .mainContainer .forLightDesktop {
+    }
+    .mainContainer.dark .forLightDesktop {
+    }
+    .mainContainer .forDarkDesktop {
+    }
+    .mainContainer.dark .forDarkDesktop {
+    }
+    .mainContainer .topBar .logo img {
+    }
+    .topBar .forLightMobile,
+    .topBar .forDarkMobile {
     }
     .topBar .search {
     }
@@ -82,5 +132,147 @@
     .topBar .search input::placeholder {
     }
     .topBar .search i {
+    }
+    .topBar .search input[type='submit'] {
+    }
+    .menuMobile {
+    }
+    .menuMobile.activate{
+    }
+    .menuMobile span {
+    }
+    /* ======================================= */
+
+    /* Website Content */
+    /* Home */
+    .homePage,
+    .sectionsPage,
+    .lastNewsPage,
+    .contactPage {
+    }
+    .mainContainer.dark .homePage {
+    }
+    #particles-js {
+    }
+    .homeContent {
+    }
+    .homeContent div {
+    }
+
+    /* Home Info Section */
+    .homeContent .homeInfo {
+    }
+    .homeInfo .homeLogoImg,
+    .homeInfo .homeInfoTitle, 
+    .homeInfo .homeBtns {
+    }
+
+    /* Logo */
+    .mainContainer.light .homeInfo .light {
+    }
+    .mainContainer.light .homeInfo .dark {
+    }
+    .mainContainer.dark .homeInfo .light {
+    }
+    .mainContainer.dark .homeInfo .dark {
+    }
+    .homeInfo .homeLogoImg {
+    }
+    .homeInfo .homeLogoImg img {
+    }
+
+    /* Title */
+    .homeInfo .homeInfoTitle {
+    }
+    .homeInfoTitle h6 {
+        font-size: 2.25em;
+    }
+    .homeInfoTitle .Eng {
+    }
+    .mainContainer.light .homeInfoTitle .Eng {
+    }
+    .mainContainer.dark .homeInfoTitle .Eng {
+    }
+    .mainContainer.light .homeInfoTitle h6 {
+    }
+    .mainContainer.dark .homeInfoTitle h6 {
+    }
+    .mainContainer.light .homeInfoTitle h6 span {
+    }
+    .mainContainer.dark .homeInfoTitle h6 span {
+    }
+    .homeInfoTitle p {
+        font-size: 1em;
+    }
+    .mainContainer.light .homeInfoTitle p {
+    }
+    .mainContainer.dark .homeInfoTitle p {
+    }
+
+    /* Action Call Btns */
+    .homeInfo .homeBtns {
+        height: 15%;
+    }
+    .homeBtns div {
+        height: 35px;
+    }
+    .homeBtns div:hover {
+    }
+    .homeBtns div a {
+    }
+    .homeBtns div:hover a {
+    }
+
+    /* Home Contact Section */
+    .homeContact {
+        width: 37%;
+    }
+    .homeContact div {
+    }
+    .homeSocialCards {
+    }
+    .homeSocialCards div {
+        border: 1px solid var(--grayWhite) !important;
+    }
+    .homeSocialCards div:hover {
+    }
+    .homeSocialCards a {
+    }
+    .mainContainer.light .homeSocialCards a {
+        color: var(--grayWhite);
+    }
+    .mainContainer.dark .homeSocialCards a {
+    }
+    .mainContainer.light .homeSocialCards div:hover a {
+    }
+    .homeSocialCards div:hover.instagram {
+    }
+    .homeSocialCards div:hover.telegram {
+    }
+    .homeSocialCards div:hover.twitter {
+    }
+    .twitter {
+    }
+
+    /* Home Background Section  */
+    .homeContent .homeBackDesign {
+    }
+    .homeBackDesign .svgContainer {
+        width: 80%;
+        height: 65%;
+    }
+    .svgContainer img {
+    }
+    .homeContent .homeBackDesign img {
+    }
+    .mainContainer.light .svgContainer .light {
+    }
+    .mainContainer.light .svgContainer .dark {
+    }
+    .mainContainer.dark .svgContainer .light {
+    }
+    .mainContainer.dark .svgContainer .dark {
+    }
+    .sectionsPage {
     }
 }

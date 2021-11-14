@@ -71,7 +71,7 @@ html {
     }
     .navMobileMenu {
         display: none;
-        width: 40px;
+        width: 65px;
         height: 25px;
         margin: auto 10px;
         -webkit-box-pack: space-evenly;
