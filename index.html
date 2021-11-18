@@ -1,4 +1,4 @@
-<html lang="en">
+<html class="html" lang="en">
 
 <head>
     <title>موقع إقلاع تك | Eqla3Tech</title>
@@ -141,6 +141,13 @@
                             <a href="#lastNews" class="lastNewsBtn">اخر الاخبار</a>
                         </div>
                     </div>
+                    <div class="homeBackDesign">
+                        <div class="svgContainer">
+                            <img class="light" src="./assets/media/homeLightShape.svg" alt="">
+                            <img class="dark" src="./assets/media/homeDarkShape.svg" alt="">
+                            <!-- <div id="particles-js"></div> -->
+                        </div>
+                    </div>
                     <div class="homeContact">
                         <div class="homeSocialCards">
                             <div class="instagram">
@@ -157,20 +164,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="homeBackDesign">
-                        <div class="svgContainer">
-                            <img class="light" src="./assets/media/homeLightShape.svg" alt="">
-                            <img class="dark" src="./assets/media/homeDarkShape.svg" alt="">
-                            <!-- <div id="particles-js"></div> -->
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="sectionsPage" id="sections">
                 <div class="sectionsContent" dir="rtl">
-                    <h3>الاقسام</h3>
-                    <div class="sectionContainer">
-                        <div class="section it">
+                    <div class="sectionsInfo">
+                        <div class="infoContent">
+                            <h3>الاقسام</h3>
+                            <p>جميع الشروحات تجدها هنا</p>
+                        </div>
+                        <div class="websiteControls">
+                            <a href="#home" class="fa fa-arrow-right" aria-hidden="true"></a>
+                            <a href="#lastNews" class="fa fa-arrow-left" aria-hidden="true"></a>
+                        </div>
+                    </div>
+                    <div class="sectionsContainer">
+                        <div class="section IT">
                             <div class="shap">
                                 <i class="fa fa-microchip" aria-hidden="true"></i>
                             </div>
@@ -182,7 +191,7 @@
                                 <a href="pages/IT/informationTech.html">تصفح المواضيع</a>
                             </div>
                         </div>
-                        <div class="section db">
+                        <div class="section DB">
                             <div class="shap">
                                 <i class="fa fa-database" aria-hidden="true"></i>
                             </div>
@@ -194,7 +203,19 @@
                                 <a href="pages/database/database.html">تصفح المواضيع</a>
                             </div>
                         </div>
-                        <div class="section c++ cpp">
+                        <div class="section NET">
+                            <div class="shap">
+                                <i class="fa fa-server" aria-hidden="true"></i>
+                            </div>
+                            <div class="description">
+                                <p class="sectionTitle">الشبكات</p>
+                                <p class="sectionDescription">كل مايخص الشبكات تجده هنا</p>
+                            </div>
+                            <div class="actionCallBtn">
+                                <a href="pages/networks/networks.html">تصفح المواضيع</a>
+                            </div>
+                        </div>
+                        <div class="section C++ cpp">
                             <div class="shap">
                                 <i class="fa fa-code" aria-hidden="true"></i>
                             </div>
@@ -206,7 +227,7 @@
                                 <a href="pages/c++/c++.html">تصفح المواضيع</a>
                             </div>
                         </div>
-                        <div class="section win">
+                        <div class="section WIN">
                             <div class="shap">
                                 <i class="fa fa-windows" aria-hidden="true"></i>
                             </div>
@@ -218,7 +239,7 @@
                                 <a href="pages/windows/windows.html">تصفح المواضيع</a>
                             </div>
                         </div>
-                        <div class="section lin">
+                        <div class="section LIN">
                             <div class="shap">
                                 <i class="fa fa-linux" aria-hidden="true"></i>
                             </div>
@@ -230,32 +251,102 @@
                                 <a href="pages/linux/linux.html">تصفح المواضيع</a>
                             </div>
                         </div>
-                        <div class="section net">
-                            <div class="shap">
-                                <i class="fa fa-server" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="lastNewsPage" id="lastNews">
+                <div class="lastNewsContent" dir="rtl">
+                    <div class="lastNewsInfo">
+                        <div class="infoContent">
+                            <h3>اخر الاخبار</h3>
+                        </div>
+                        <div class="websiteControls">
+                            <a href="#sections" class="fa fa-arrow-right" aria-hidden="true"></a>
+                            <a href="#contact" class="fa fa-arrow-left" aria-hidden="true"></a>
+                        </div>
+                    </div>
+                    <div class="lastNewsContainer">
+                        <div class="lastNewsSection lastNewsIT">
+                            <div class="lastNewsDetail">
+                                <div class="lastNewsControls">
+                                    <i class="fa fa-arrow-right" aria-hidden="true" id="lastNewsPrev"></i>
+                                    <i class="fa fa-arrow-left" aria-hidden="true" id="lastNewsNext"></i>
+                                </div>
                             </div>
-                            <div class="description">
-                                <p class="sectionTitle">Networks</p>
-                                <p class="sectionDescription">كل مايخص الشبكات تجده هنا</p>
+                            <div class="lastNewsSecContent" id="IT">
+                                <div class="subInfo">
+                                    <div class="subImg"><i class="fa fa-microchip" aria-hidden="true"></i></div>
+                                    <div class="subTitle">تقنية المعلومات</div>
+                                </div>
+                                <div class="subContent">
+                                    IT section
+                                </div>
                             </div>
-                            <div class="actionCallBtn">
-                                <a href="pages/networks/networks.html">تصفح المواضيع</a>
+                            <div class="lastNewsSecContent" id="DB">
+                                <div class="subInfo">
+                                    <div class="subImg"><i class="fa fa-database" aria-hidden="true"></i></div>
+                                    <div class="subTitle">قواعد البيانات</div>
+                                </div>
+                                <div class="subContent">
+                                    DB section
+                                </div>
+                            </div>
+                            <div class="lastNewsSecContent" id="NET">
+                                <div class="subInfo">
+                                    <div class="subImg"><i class="fa fa-server" aria-hidden="true"></i></div>
+                                    <div class="subTitle">الشبكات</div>
+                                </div>
+                                <div class="subContent">
+                                    NET section
+                                </div>
+                            </div>
+                            <div class="lastNewsSecContent" id="CPP">
+                                <div class="subInfo">
+                                    <div class="subImg"><i class="fa fa-code" aria-hidden="true"></i></div>
+                                    <div class="subTitle">++C</div>
+                                </div>
+                                <div class="subContent">
+                                    C++ section
+                                </div>
+                            </div>
+                            <div class="lastNewsSecContent" id="WIN">
+                                <div class="subInfo">
+                                    <div class="subImg"><i class="fa fa-windows" aria-hidden="true"></i></div>
+                                    <div class="subTitle">Windows</div>
+                                </div>
+                                <div class="subContent">
+                                    windows section
+                                </div>
+                            </div>
+                            <div class="lastNewsSecContent" id="LIN">
+                                <div class="subInfo">
+                                    <div class="subImg"><i class="fa fa-linux" aria-hidden="true"></i></div>
+                                    <div class="subTitle">Linux</div>
+                                </div>
+                                <div class="subContent">
+                                    linux section
+                                </div>
+                            </div>
+                            <div class="lastNewsSecIcons">
+                                <i class="sctionIcon IT fa fa-microchip" aria-hidden="true"></i>
+                                <i class="sctionIcon DB fa fa-database" aria-hidden="true"></i>
+                                <i class="sctionIcon NET fa fa-server" aria-hidden="true"></i>
+                                <i class="sctionIcon CPP fa fa-code" aria-hidden="true"></i>
+                                <i class="sctionIcon WIN fa fa-windows" aria-hidden="true"></i>
+                                <i class="sctionIcon LIN fa fa-linux" aria-hidden="true"></i>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="lastNewsPage" id="lastNews">
-
-            </div>
             <div class="contactPage" id="contact">
 
             </div>
         </div>
-    </div>
-    <div class="dateTime">
-        <div class="date"></div>
-        <div class="time"></div>
+        <div class="dateTime">
+            <div class="date"></div>
+            <div class="time"></div>
+        </div>
     </div>
     <!-- Js Files -->
     <script src="./assets/js/main.js"></script>

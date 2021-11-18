@@ -1,0 +1,32 @@
+.subject {
+    width: 100%;
+    height: 100%;
+    padding: 0 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.subject::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7.5px;
+    border-radius: 5px;
+}
+.subject::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background-color: var(--navSkyBlue);
+}
+.subject .subjectInfo {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    display: flex;
+}
+.subject .subjectInfo p {
+    margin: 0 15px;
+    font-family: var(--mainArFont);
+}
+.subject .subjectContent {
+    font-family: var(--mainArFont);
+}

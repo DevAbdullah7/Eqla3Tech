@@ -1,6 +1,7 @@
 // Navbar
 // Add hoverd class to website sections
 let home = document.querySelector('.home');
+let html = document.querySelector('.html');
 let sections = document.querySelector('.sections');
 let lastNews = document.querySelector('.lastNews');
 let contact = document.querySelector('.contact');
@@ -111,7 +112,7 @@ window.addEventListener('scroll', function () {
             lastNews.classList.remove('clicked');
             contact.classList.remove('clicked');
             sections.classList.add('clicked');
-        } else if (scrollY < 3000) {
+        } else if (scrollY < 2500) {
             home.classList.remove('clicked');
             sections.classList.remove('clicked');
             contact.classList.remove('clicked');
@@ -130,9 +131,11 @@ function lightMood() {
     window.localStorage.setItem('mood', 'light');
     dark.classList.remove('clicked');
     light.classList.add('clicked');
+    html.classList.remove('dark');
     body.classList.remove('dark');
     navContainer.classList.remove('dark');
     mainContainer.classList.remove('dark');
+    html.classList.add('light');
     body.classList.add('light');
     navContainer.classList.add('light');
     mainContainer.classList.add('light');
@@ -142,8 +145,10 @@ function darkMood() {
     light.classList.remove('clicked');
     dark.classList.add('clicked');
     body.classList.remove('light');
+    html.classList.remove('light');
     navContainer.classList.remove('light');
     mainContainer.classList.remove('light');
+    html.classList.add('dark');
     body.classList.add('dark');
     navContainer.classList.add('dark');
     mainContainer.classList.add('dark');
@@ -163,7 +168,7 @@ light.onclick = function () {
 dark.onclick = function () {
     darkMood();
 }
-let sectionsItems = document.querySelectorAll('.section');
+let sectionsItems = document.querySelectorAll('.sectionsContainer .section');
 let date = new Date()
 let timeNow = document.querySelector('.dateTime .time')
 let dateNow = document.querySelector('.dateTime .date')
@@ -192,4 +197,75 @@ timeNow.innerHTML = `${String(hourNow)}:${String(mintNow)} ${amPm}`;
 window.setInterval(function () {
     window.location.reload();
 }, 60000);
-document.querySelector('.sectionContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3)}, 375px)`
+
+let lastNewsPrev = document.getElementById('lastNewsPrev')
+let lastNewsNext = document.getElementById('lastNewsNext')
+let lastNewsSections = document.querySelectorAll('.lastNewsSecContent')
+let lastNewsIcons = document.querySelectorAll('.lastNewsSecIcons i')
+let lastNewsCounter;
+if (window.localStorage.hasOwnProperty('lastNewsCounter')) {
+    lastNewsCounter = Number(window.localStorage.lastNewsCounter)
+} else {
+    lastNewsCounter = 0
+}
+lastNewsSections.forEach(function (item, ind) {
+    if (ind === lastNewsCounter) {
+        item.classList.add('activate')
+    }
+})
+lastNewsPrev.onclick = function () {
+    if (lastNewsCounter !== 0) {
+        lastNewsCounter -= 1;
+    } else {
+        lastNewsCounter = 5;
+    }
+    lastNewsSections.forEach(function (item) {
+        item.classList.remove('activate')
+    })
+    lastNewsSections[lastNewsCounter].classList.add('activate');
+    window.localStorage.setItem('lastNewsCounter', String(lastNewsCounter))
+}
+lastNewsNext.onclick = function () {
+    if (lastNewsCounter !== 5) {
+        lastNewsCounter += 1;
+    } else {
+        lastNewsCounter = 0;
+    }
+    lastNewsSections.forEach(function (item) {
+        item.classList.remove('activate')
+    })
+    lastNewsSections[lastNewsCounter].classList.add('activate');
+    window.localStorage.setItem('lastNewsCounter', String(lastNewsCounter))
+}
+lastNewsIcons.forEach(function (icon, index) {
+    icon.onclick = function () {
+        lastNewsSections.forEach(function (item, ind) {
+            item.classList.remove('activate')
+            if (index === ind) {
+                item.classList.add('activate')
+                lastNewsCounter = index
+                window.localStorage.setItem('lastNewsCounter', String(lastNewsCounter))
+            }
+        })
+    }
+})
+function lastNewsSlide() {
+    lastNewsSections.forEach(function (item) {
+        item.classList.remove('activate')
+    });
+    if (lastNewsCounter === 5) {
+        lastNewsCounter = 0
+    } else {
+        lastNewsCounter += 1;
+    }
+    lastNewsSections[lastNewsCounter].classList.add('activate')
+    window.localStorage.setItem('lastNewsCounter', String(lastNewsCounter))
+}
+let slide = window.setInterval(lastNewsSlide, 3000)
+document.querySelector('.lastNewsSection').onmouseover = function () {
+    clearInterval(slide)
+}
+document.querySelector('.lastNewsSection').onmouseleave = function () {
+    slide = window.setInterval(lastNewsSlide, 3000)
+}
+document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3)}, 325px)`
