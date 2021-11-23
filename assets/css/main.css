@@ -48,9 +48,6 @@ html {
     position: relative;
     width: 100%;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     background-color: var(--grayWhite);
     -webkit-transition: background-color 0.5s;
     -o-transition: background-color 0.5s;
@@ -86,8 +83,8 @@ html {
 .navContainer {
     position: fixed;
     width: 15%;
-    height: 969px;
-    /* height: 1041px; */
+    /* height: 969px; */
+    height: 1041px;
     right: 0;
     border-radius: 20px 0 0 20px;
     -webkit-transition: 0.5s;
@@ -313,18 +310,27 @@ html {
 .darkModeContainer {
     position: relative;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    flex-direction: column;
     -webkit-transform: translateX(10px);
         -ms-transform: translateX(10px);
             transform: translateX(10px);
 }
-.darkModeContainer div {
+.darkMode {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.darkModeContainer #light, 
+.darkModeContainer #dark {
     width: 50px;
     height: 50px;
     display: -webkit-box;
@@ -344,11 +350,32 @@ html {
     border-radius: 15px;
     transition: 0.5s;
 }
-.darkModeContainer div:hover {
+.darkModeContainer #light:hover,
+.darkModeContainer #dark:hover {
     transform: scale(1.1);
 }
 .darkModeContainer .clicked {
     border: 1px solid var(--grayWhite);
+}
+
+/* Time */
+.dateTime {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    text-transform: uppercase;
+    font-family: var(--mainArFont);
+    color: var(--grayWhite);
+    font-size: 1.25em;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.dateTime .date {
+    margin-left: 10px;
 }
 
 /* ======================================= */
@@ -527,7 +554,8 @@ html {
 .sectionsPage,
 .lastNewsPage,
 .contactPage {
-    min-height: 969px;
+    /* min-height: 990px; */
+    min-height: 1041px;
     padding-top: 75px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -739,115 +767,11 @@ html {
     border: 1px solid var(--navSkyBlue);
 }
 .mainContainer.dark .homeBtns a {
-    background: -o-linear-gradient(315deg, rgba(33,33,33,1) 75%, rgba(22,22,22,1) 150%);
-    background: linear-gradient(135deg, rgba(33,33,33,1) 75%, rgba(22,22,22,1) 150%);
-    border: 2px solid var(--grayBlack);
+    background: -o-linear-gradient(315deg, rgba(33,33,33,1) 50%, rgba(22,22,22,1) 120%);
+    background: linear-gradient(135deg, rgba(33,33,33,1) 50%, rgba(22,22,22,1) 120%);
+    border: 1px solid var(--grayBlack);
 }
 
-/* Home Contact Section */
-.homeContact {
-    width: 25%;
-    bottom: 0;
-    right: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: end !important;
-        -ms-flex-pack: end !important;
-            justify-content: flex-end !important;
-}
-.homeContact div {
-    position: relative;
-}
-.homeSocialCards {
-    position: relative;
-    width: 85%;
-    height: 50%;
-    margin-bottom: 20px;
-    -webkit-box-align: end !important;
-        -ms-flex-align: end !important;
-            align-items: flex-end !important;
-    opacity: 1;
-}
-.homeSocialCards div {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    margin: 0 0.5rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-radius: 15px;
-    font-size: 1em;
-    text-decoration: none;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-perspective: 500px;
-            perspective: 500px;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
-}
-.mainContainer.light .homeSocialCards div {
-    border: 1px solid var(--navSkyBlue);
-}
-.mainContainer.dark .homeSocialCards div {
-    border: 1px solid var(--grayWhite);
-}
-.mainContainer.light .homeSocialCards div:hover, 
-.mainContainer.dark .homeSocialCards div:hover {
-    cursor: pointer;
-    transform: scale(1.25);
-    font-size: 1.25em;
-    border: none;
-}
-
-.homeSocialCards a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-decoration: none;
-    font-size: 1.5em;
-    -webkit-transform: translateZ(50px);
-            transform: translateZ(50px);
-    transition: 0.5;
-}
-.mainContainer.light .homeSocialCards a {
-    color: var(--navSkyBlue);
-}
-.mainContainer.dark .homeSocialCards a {
-    color: var(--grayWhite);
-}
-.mainContainer.light .homeSocialCards div:hover a {
-    color: var(--grayWhite);
-}
-.homeSocialCards div:hover.instagram {
-    background-color: #e4405f;
-}
-.homeSocialCards div:hover.telegram {
-    background-color: #0088cc;
-}
-.homeSocialCards div:hover.twitter {
-    background-color: #0099ff;
-}
-.twitter {
-    z-index: 1000;
-}
 
   /* Home Background Section  */
 .homeContent .homeBackDesign {
@@ -1126,12 +1050,16 @@ html {
     cursor: pointer;
     transition: 0.5s;
 }
+.actionCallBtn a:hover {
+    transform: scale(1.15);
+}
 .mainContainer.light .actionCallBtn a {
     background-color: var(--navSkyBlue);
 }
 .mainContainer.dark .actionCallBtn a {
-    background: -o-linear-gradient(315deg, rgba(33,33,33,1) 75%, rgba(22,22,22,1) 150%);
-    background: linear-gradient(135deg, rgba(33,33,33,1) 75%, rgba(22,22,22,1) 150%);
+    background: -o-linear-gradient(315deg, rgba(33,33,33,1) 50%, rgba(22,22,22,1) 120%);
+    background: linear-gradient(135deg, rgba(33,33,33,1) 50%, rgba(22,22,22,1) 120%);
+    border: 1px solid var(--grayBlack);
 }
 
 /* ============================== */
@@ -1139,6 +1067,7 @@ html {
     position: relative;
     width: 90%;
     height: 966px;
+    /* height: 725px; */
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -1166,6 +1095,9 @@ html {
     cursor: pointer;
     transition: 0.5s;
 }
+.backBtn .btnShape:hover {
+    transform: scale(1.25);
+}
 .backBtn .btnTitle {
     font-size: 1.5em;
     font-family: var(--mainArFont);
@@ -1182,7 +1114,7 @@ html {
 }
 .mainContainer.dark .backBtn .btnShape {
     color: var(--grayWhite);
-    border: 1px solid var(--grayWhite);
+    border: 1px solid var(--darkBlack);
 }
 .mainContainer.dark .backBtn .btnTitle {
     color: var(--grayWhite);
@@ -1193,14 +1125,15 @@ html {
     justify-content: center;
     margin-top: 15px;
     border-radius: 15px;
+    backdrop-filter: blur(2.5px);
     transition: 0.5s;
 }
 .mainContainer.light .subjectsContainer .contentContainer {
     border: 1px solid var(--navSkyBlue);
-    background: rgba(238, 238, 238, 0.5);
+    background: rgba(238, 238, 238, 0.25);
 }
 .mainContainer.dark .subjectsContainer .contentContainer {
-    border: 2px solid #222;
+    border: 1px solid #222;
     background: rgba(33, 33, 33, 0.5);
 }
 .contentContainer .sectionDetail, 
@@ -1264,7 +1197,10 @@ html {
 .mainContainer.dark .sectionDetail .sectionControls a {
     color: var(--grayWhite);
     background: var(--grayBlack);
-    border: 2px solid #222;
+    border: 1px solid #222;
+}
+.sectionControls a:hover {
+    transform: scale(1.25)
 }
 .sectionControls p {
     width: 250px;
@@ -1329,6 +1265,9 @@ html {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     transition: 0.5s;
 }
+.subjectsControls a:hover {
+    transform: scale(1.1);
+}
 .mainContainer.light .subjectsControls a {
     color: var(--navSkyBlue);
     background: var(--grayWhite);
@@ -1337,90 +1276,9 @@ html {
 .mainContainer.dark .subjectsControls a {
     color: var(--grayWhite);
     background: var(--grayBlack);
-    border: 2px solid #222;
-}
-.subjects table {
-    width: 100%;
-    font-family: var(--mainArFont);
-    transition: 0.5s;
-}
-.mainContainer.light .subjects table {
-    background: var(--grayWhite);
-    border-bottom: 1px solid var(--navSkyBlue);
-}
-.mainContainer.dark .subjects table {
-    background: var(--grayBlack);
-    border-bottom: 2px solid #222;
-}
-.subjects table thead {
-    height: 70px;
-    font-size: 1.15em;
-    color: var(--grayWhite);
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-    transition: 0.5s;
-}
-.mainContainer.light .subjects table thead {
-    background: var(--navSkyBlue);
-    border-top: 1px solid var(--navSkyBlue);
-}
-.mainContainer.dark .subjects table thead {
-    background: #222;
-    border-top: 2px solid #222;
-}
-.subjects table thead th {
-}
-.subjects table tbody tr {
-    height: 55px;
-    transition: 0.5s;
-}
-.mainContainer.light .subjects table tbody tr:nth-child(even) {
-    background: #2878fa21;
-}
-.mainContainer.dark .subjects table tbody tr:nth-child(even) {
-    background: rgba(22, 22, 22, 0.25);
-}
-.subjects tbody .subTitle a {
-    width: 75%;
-    padding: 0 25px;
-    font-size: 1.5em;
-    text-decoration: none;
-    transition: 0.5s;
-}
-.mainContainer.light .subjects table tbody .subTitle a,
-.mainContainer.light .subjects table tbody td {
-    color: var(--grayBlack);
-}
-.mainContainer.dark .subjects table tbody .subTitle a,
-.mainContainer.dark .subjects table tbody td {
-    color: var(--grayWhite);
-}
-.subjects table .subWriter,
-.subjects table .subDate {
-    text-align: center;
-}
-.subjects table .subWriter {
-    width: 11%;
-}
-.subjects table .subDate {
-    width: 10%;
+    border: 1px solid #222;
 }
 
-.dateTime {
-    position: fixed;
-    bottom: 0;
-    left: 42.5%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: row-reverse;
-    text-transform: uppercase;
-    font-family: var(--mainArFont);
-    color: var(--grayWhite);
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-    z-index: 1;
-}
-.dateTime .date {
-    margin-left: 10px;
-}
 
 /* ============================================================================= */
 /* Last News Page */
@@ -1688,4 +1546,510 @@ html {
 }
 .lastNewsSecIcons i:hover {
     transform: scale(1.2);
+}
+.mainContainer.light .lastNewsSecIcons i.activate {
+    transform: scale(1.1);
+    color: var(--grayWhite);
+    background-color: var(--navSkyBlue);
+}
+.mainContainer.dark .lastNewsSecIcons i.activate {
+    transform: scale(1.1);
+    color: var(--grayBlack);
+    background-color: var(--grayWhite);
+}
+
+.lastNewsSecContent .subContent {
+    width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+table {
+    width: 100%;
+    font-family: var(--mainArFont);
+    transition: 0.5s;
+}
+.mainContainer.light table {
+    background: linear-gradient(130deg, rgba(238, 238, 238, 0.5) 100%, transparent 0%);
+}
+.mainContainer.dark table {
+    background: linear-gradient(130deg, rgba(33, 33, 33, 0.25) 100%, transparent 0%);
+}
+table thead {
+    height: 60px;
+    font-size: 1.15em;
+    color: var(--grayWhite);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.5s;
+}
+table th,
+table td {
+    border: 1px solid #2878fa21;
+}
+.mainContainer.dark table th,
+.mainContainer.dark table td {
+    border: 1px solid rgba(2, 2, 2, 0.25);
+}
+table tr {
+
+}
+.mainContainer.light table thead {
+    background: var(--navSkyBlue);
+}
+.mainContainer.dark table thead {
+    background: #222;
+}
+table thead th {
+}
+table tbody tr {
+    height: 55px;
+    transition: 0.5s;
+}
+.mainContainer.light table tbody tr:nth-child(even) {
+    background: linear-gradient(130deg, rgba(238, 238, 238, 0.5) 100%, transparent 0%);
+}
+.mainContainer.dark table tbody tr:nth-child(even) {
+    background: rgba(22, 22, 22, 0.25);
+}
+tbody .subTitle {
+    text-align: center;
+}
+tbody .subTitle a {
+    width: 70%;
+    padding: 0 25px;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.mainContainer.light table tbody .subTitle a,
+.mainContainer.light table tbody td {
+    color: var(--grayBlack);
+}
+.mainContainer.dark table tbody .subTitle a,
+.mainContainer.dark table tbody td {
+    color: var(--grayWhite);
+}
+table .subWriter,
+table .subDate {
+    text-align: center;
+}
+table .subWriter {
+    width: 15%;
+}
+table .subDate {
+    width: 15%;
+}
+
+.subActionCall {
+    position: absolute;
+    width: 27.5%;
+    height: 35px;
+    bottom: 35px;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    text-decoration: none;
+    font-family: var(--mainArFont);
+    color: var(--grayWhite);
+    border-radius: 25px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1),
+        0 0 15px 5px rgba(0, 0, 0, 0.1) inset;
+    transition: 0.5s;
+}
+.mainContainer.light .subActionCall {
+    background: var(--navSkyBlue);
+}
+.mainContainer.dark .subActionCall {
+    background: -o-linear-gradient(315deg, rgba(33,33,33,1) 50%, rgba(22,22,22,1) 120%);
+    background: linear-gradient(135deg, rgba(33,33,33,1) 50%, rgba(22,22,22,1) 120%);
+    border: 1px solid var(--grayBlack);
+}
+.subActionCall:hover {
+    transform: scale(1.1);
+}
+
+.contactPage {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.contactPageInfo {
+    position: relative;
+    width: 85%;
+    height: 100px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    /* z-index: 1; */
+}
+.contactPage .contactContainer {
+    position: relative;
+    width: 85%;
+    height: 625px;
+    /* height: 575px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactContainer .contactMsg {
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    left: 6%;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px 5px rgb(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+.mainContainer.light .contactContainer .contactMsg {
+    background: linear-gradient(90deg, rgba(238, 238, 238, 0.25) 60%, rgb(40, 120, 250, 0.25) 100%);
+    border: 1px solid var(--navSkyBlue);
+}
+.mainContainer.dark .contactContainer .contactMsg {
+    background: linear-gradient(90deg, rgba(33, 33, 33, 0.25) 60%, rgb(2, 2, 2, 0.25) 100%);
+    border: 1px solid var(--darkBlack);
+}
+.contactMsg .msgContent {
+    position: relative;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.msgContent h3 {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 92.5%;
+    transform: translateX(-50%);
+    font-family: var(--mainArFont);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.5s;
+}
+.mainContainer.dark .msgContent h3 {
+    color: var(--grayWhite);
+}
+.msgContent .inputBox {
+    position: relative;
+    width: 100%;
+    margin: 15px 0;
+}
+.clintName {
+    display: flex;
+    justify-content: space-between;
+}
+.clintName div {
+    width: 49%;
+}
+.msgContent form {
+    position: relative;
+    width: 90%;
+}
+.msgContent form span {
+    font-size: 1.15em;
+    font-family: var(--mainArFont);
+    text-shadow: 0 0 5px rgb(0, 0, 0, 0.25);
+    transition: 0.5s;
+}
+.mainContainer.dark .msgContent form span {
+    color: var(--grayWhite);
+}
+.msgContent form input,
+.msgContent form textarea {
+    width: 100%;
+    padding: 5px 0;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--mainArFont);
+    text-align: center;
+    text-shadow: 0 0 5px rgb(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: 0.5s;
+}
+.mainContainer.light .msgContent form input,
+.mainContainer.light .msgContent form textarea {
+    color: var(--grayBlack);
+    border-bottom: 1px solid var(--navSkyBlue);
+}
+.mainContainer.dark .msgContent form input,
+.mainContainer.dark .msgContent form textarea {
+    color: var(--grayWhite);
+    border-bottom: 1px solid var(--grayWhite);
+}
+.msgContent form textarea {
+    text-align: left;
+    resize: none;
+}
+.msgContent form textarea::-webkit-scrollbar {
+    width: 7.5px;
+    background-color: transparent;
+}
+.msgContent form textarea::-webkit-scrollbar-thumb {
+    width: 7.5px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.mainContainer.light .msgContent form textarea::-webkit-scrollbar-thumb {
+    background-color: var(--navSkyBlue);
+}
+.mainContainer.dark .msgContent form textarea::-webkit-scrollbar-thumb {
+    background-color: var(--darkBlack);
+}
+.msgContent form button[type="submit"] {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    right: 0;
+    bottom: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    color: var(--grayWhite);
+    font-family: var(--mainArFont);
+    border: none;
+    box-shadow: 0 0 10px 2.5px rgba(0, 0, 0, 0.15),
+        0 0 10px 2.5px rgba(0, 0, 0, 0.075) inset;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.msgContent form button[type="submit"]:hover {
+    transform: scale(1.1);
+}
+.mainContainer.light .msgContent form button[type="submit"] {
+    background: var(--navSkyBlue);
+}
+.mainContainer.dark .msgContent form button[type="submit"] {
+    background: linear-gradient(135deg, rgba(33,33,33,1) 50%, rgba(22,22,22,1) 120%);
+    border: 1px solid var(--grayBlack);
+}
+.contactContainer .contactCard {
+    position: absolute;
+    width: 25%;
+    height: 75%;
+    right: 6.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 5px rgb(0, 0, 0, 0.15);
+    z-index: 1;
+    transition: 0.5s;
+}
+.mainContainer.light .contactContainer .contactCard {
+    background: var(--navSkyBlue);
+}
+.mainContainer.dark .contactContainer .contactCard {
+    background: var(--darkBlack);
+}
+.contactCard .websiteInfo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* transform: translateY(-35%); */
+}
+.websiteInfo a {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.35));
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.35));
+}
+h6 {
+    margin: 25px;
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: var(--mainArFont);
+    color: var(--grayWhite);
+    text-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+}
+h6 .highLine {
+    font-size: 1.5em;
+    margin: 0 10px;
+    color: var(--darkBlack);
+    transition: 0.5s;
+}
+.mainContainer.dark h6 .highLine {
+    color: var(--grayWhite);
+}
+h6 .Eng {
+    font-family: var(--secondEngFont);
+    font-weight: 600;
+}
+
+.contactCard .contactInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* Home Contact Section */
+.homeContact {
+    width: 25%;
+    bottom: 0;
+    right: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: center !important;
+}
+.homeContact div {
+    position: relative;
+}
+.homeSocialCards {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    -webkit-box-align: end !important;
+        -ms-flex-align: end !important;
+            align-items: flex-end !important;
+    flex-direction: row-reverse;
+    justify-content: center;
+    opacity: 1;
+}
+.homeSocialCards div {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 15px;
+    font-size: 1em;
+    text-decoration: none;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-perspective: 500px;
+            perspective: 500px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+.mainContainer.light .homeSocialCards div {
+    border: 1px solid var(--grayWhite);
+}
+.mainContainer.dark .homeSocialCards div {
+    border: 1px solid var(--grayWhite);
+}
+.mainContainer.light .homeSocialCards div:hover, 
+.mainContainer.dark .homeSocialCards div:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+    font-size: 1.25em;
+    border: none;
+}
+
+.homeSocialCards a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    font-size: 1.5em;
+    -webkit-transform: translateZ(50px);
+            transform: translateZ(50px);
+    transition: 0.5;
+}
+.mainContainer.light .homeSocialCards a {
+    color: var(--grayWhite);
+}
+.mainContainer.dark .homeSocialCards a {
+    color: var(--grayWhite);
+}
+.mainContainer.light .homeSocialCards div:hover a {
+    color: var(--grayWhite);
+}
+.homeSocialCards div:hover.instagram {
+    background-color: #e4405f;
+}
+.homeSocialCards div:hover.telegram {
+    background-color: #0088cc;
+}
+.homeSocialCards div:hover.twitter {
+    background-color: #0099ff;
+}
+.twitter {
+    z-index: 1000;
+}
+
+.contactPage .footer {
+    width: 75%;
+    height: 200px;
+    /* height: 135px; */
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contactPage .footer h6 {
+    margin: 0;
+    margin-bottom: 15px;
+}
+.mainContainer.dark .contactPage .footer h6 .highLine {
+    color: var(--grayWhite);
+}
+.footer .googleAdsense {
+    margin: 10px 0;
+}
+.footer .googleAdsense a {
+    margin: 10px;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-family: var(--mainArFont);
+    color: var(--grayWhite);
+    border-radius: 25px;
+    border: 1px solid var(--grayWhite);
+    text-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+    transition: 0.5s
+}
+.footer .googleAdsense a:hover {
+    background-color: rgba(238, 238, 238, 0.25);
+}
+.contactPage .footer p {
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-family: var(--mainArFont);
+    color: var(--grayWhite);
+    text-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+}
+.contactPage .footer p a {
+    text-decoration: none;
+    color: var(--grayWhite);
 }

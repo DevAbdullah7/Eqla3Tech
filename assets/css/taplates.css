@@ -22,6 +22,8 @@
     /* Navbar */
     .navContainer {
         width: 10%;
+    }
+    .navContainer.light {
         border: none;
     }
     .navContainer.dark {
@@ -106,9 +108,24 @@
             -ms-flex-direction: column;
                 flex-direction: column;
     }
-    .darkModeContainer div {
+    .darkMode {
+        margin-bottom: 25px;
+    }
+    .darkModeContainer #light, 
+    .darkModeContainer #dark {
+        height: 50px;
+        padding: 0;
     }
     .darkModeContainer .clicked {
+    }
+    .darkMode {
+        flex-direction: column;
+    }
+    .dateTime {
+        flex-direction: column-reverse;
+    }
+    .dateTime .date {
+        display: none;
     }
     /* ======================================= */
 
@@ -118,6 +135,7 @@
     }
     /* Top Bar */
     .topBar {
+        width: 90%;
     }
     .mainContainer .topBar {
     }
@@ -134,15 +152,18 @@
     .mainContainer.dark .forDarkDesktop {
     }
     .mainContainer .topBar .logo img {
+        display: none;
     }
     .topBar .forLightMobile,
     .topBar .forDarkMobile {
     }
     .topBar .search {
+        transform: none;
     }
     .search .searchContainer {
     }
     .topBar .search input {
+        width: 25em;
     }
     .topBar .search input::-webkit-input-placeholder {
     }
@@ -214,7 +235,7 @@
     .homeInfo .homeInfoTitle {
     }
     .homeInfoTitle h6 {
-        font-size: 2.5em;
+        font-size: 2em;
     }
     .homeInfoTitle .Eng {
     }
@@ -231,7 +252,7 @@
     .mainContainer.dark .homeInfoTitle h6 span {
     }
     .homeInfoTitle p {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
     .mainContainer.light .homeInfoTitle p {
     }
@@ -301,6 +322,483 @@
     }
     .mainContainer.dark .svgContainer .dark {
     }
+    
+    /* ============================================== */
+
+    /* Sections page */
     .sectionsPage {
+    }
+    .sectionsContent {
+        width: 100%;
+    }
+    .mainContainer.light .sectionsContent {
+    }
+    .mainContainer.dark .sectionsContent {
+    }
+    .sectionsContent::-webkit-scrollbar {
+    }
+    .mainContainer.light .sectionsContent::-webkit-scrollbar-thumb {
+    }
+    .sectionsInfo {
+    }
+    .sectionsInfo div {
+    }
+    .infoContent {
+    }
+    .infoContent h3 {
+        font-size: 1em;
+    }
+    .infoContent p {
+        font-size: 0.75em;
+    }
+    .mainContainer.light .infoContent {
+    }
+    .mainContainer.dark .infoContent {
+    }
+    .websiteControls {
+        width: 50%;
+    }
+    .websiteControls a {
+    }
+    .websiteControls a:hover {
+    }
+    .mainContainer.light .websiteControls a {
+    }
+    .mainContainer.dark .websiteControls a {
+    }
+
+    .sectionsContainer {
+        grid-template-columns: repeat(2, calc(100%/2));
+        gap: 2.5%;
+    }
+    .section {
+    }
+    .mainContainer.light .section {
+    }
+    .mainContainer.dark .section {
+    }
+    .section:hover {
+        transform: scale(1.05);
+    }
+    .section::before {
+    }
+    .section:hover::before {
+    }
+    .mainContainer.dark .section::before {
+    }
+    .mainContainer.dark .section:hover::before {
+    }
+
+    .section .shap {
+        font-size: 2.5em;
+    }
+    .mainContainer.light .section .shap {
+    }
+    .mainContainer.dark .section .shap {
+    }
+    .section .description {
+    }
+    .mainContainer.light .section .description {
+    }
+    .mainContainer.dark .section .description {
+    }
+    .description .sectionTitle {
+        font-size: 0.75em;
+    }
+    .description .sectionDescription {
+        line-height: 25px;
+        font-size: 0.65em;
+    }
+    .section .actionCallBtn {
+    }
+    .actionCallBtn a {
+        font-size: 0.75em;
+    }
+    .actionCallBtn a:hover {
+    }
+    .mainContainer.light .actionCallBtn a {
+    }
+    .mainContainer.dark .actionCallBtn a {
+    }
+
+    /* ============================== */
+    .subjectsContainer {
+    }
+    .subjectsContainer .backBtn, 
+    .subjectsContainer .contentContainer {
+    }
+    .subjectsContainer .backBtn {
+    }
+    .backBtn .btnShape {
+    }
+    .backBtn .btnShape:hover {
+    }
+    .backBtn .btnTitle {
+    }
+    .mainContainer.light .backBtn .btnShape {
+    }
+    .mainContainer.light .backBtn .btnTitle {
+    }
+    .mainContainer.dark .backBtn .btnShape {
+    }
+    .mainContainer.dark .backBtn .btnTitle {
+    }
+    .subjectsContainer .contentContainer {
+    }
+    .mainContainer.light .subjectsContainer .contentContainer {
+    }
+    .mainContainer.dark .subjectsContainer .contentContainer {
+    }
+    .contentContainer .sectionDetail, 
+    .contentContainer .subjectsContent, 
+    .contentContainer .subjectsControls {
+    }
+    .contentContainer .sectionDetail {
+    }
+    .sectionDetail .sectionImg {
+    }
+    .mainContainer.light .sectionDetail .sectionImg {
+    }
+    .mainContainer.dark .sectionDetail .sectionImg {
+    }
+    .sectionDetail .sectionControls {
+    }
+    .mainContainer.light .sectionDetail .sectionControls {
+    }
+    .mainContainer.dark .sectionDetail .sectionControls {
+    }
+    .sectionControls a {
+    }
+    .mainContainer.light .sectionDetail .sectionControls a {
+    }
+    .mainContainer.dark .sectionDetail .sectionControls a {
+    }
+    .sectionControls a:hover {
+    }
+    .sectionControls p {
+    }
+    .mainContainer.dark .sectionControls p {
+    }
+
+    .subjectsContent {
+    }
+    .subjectsContent .subjects {
+    }
+
+    .subjectsControls {
+    }
+    .subjectsControls .pageNum {
+    }
+    .subjectsControls a {
+    }
+    .subjectsControls a:hover {
+    }
+    .mainContainer.light .subjectsControls a {
+    }
+    .mainContainer.dark .subjectsControls a {
+    }
+
+
+    /* ============================================================================= */
+    /* Last News Page */
+    .lastNewsPage {
+    }
+    .lastNewsContent {
+    }
+    .mainContainer.light .lastNewsContent {
+    }
+    .mainContainer.dark .lastNewsContent {
+    }
+    .lastNewsContent::-webkit-scrollbar {
+    }
+    .mainContainer.light .lastNewsContent::-webkit-scrollbar-thumb {
+    }
+    .lastNewsInfo {
+        width: 100%;
+    }
+    .lastNewsInfo div {
+    }
+
+    .lastNewsContainer {
+        width: 100%;
+    }
+    .lastNewsSection {
+        width: 100%;
+    }
+    .lastNewsDetail {
+    }
+    .mainContainer.light .lastNewsSection {
+    }
+    .mainContainer.dark .lastNewsSection {
+    }
+
+    .lastNewsDetail {
+    }
+
+    .lastNewsImg {
+    }
+    .mainContainer.light .lastNewsImg {
+    }
+    .mainContainer.dark .lastNewsImg {
+    }
+    .lastNewsControls {
+        width: 42.5%;
+    }
+    .mainContainer.light .lastNewsControls {
+    }
+    .mainContainer.dark .lastNewsControls {
+    }
+    .lastNewsControls i {
+    }
+    .lastNewsControls i:hover {
+    }
+    .mainContainer.light .lastNewsControls i {
+    }
+    .mainContainer.dark .lastNewsControls i {
+    }
+    .lastNewsSecContent {
+    }
+    .lastNewsSecContent.activate {
+    }
+    .lastNewsSecContent .subInfo {
+    }
+    .lastNewsSecContent .subInfo .subImg {
+    }
+    .lastNewsSecContent .subInfo .subTitle {
+    }
+    .mainContainer.light .lastNewsSecContent .subInfo .subImg {
+    }
+    .mainContainer.dark .lastNewsSecContent .subInfo .subImg {
+    }
+    .mainContainer.dark .lastNewsSecContent .subInfo .subTitle {
+    }
+    .lastNewsSecContent .subContent {
+    }
+    .mainContainer.dark .lastNewsSecContent .subContent {
+    }
+
+    .lastNewsSecIcons {
+    }
+    .lastNewsSecIcons i {
+    }
+    .lastNewsSecIcons .IT,
+    .lastNewsSecIcons .LIN {
+    }
+    .lastNewsSecIcons .DB,
+    .lastNewsSecIcons .WIN {
+    }
+    .lastNewsSecIcons .NET,
+    .lastNewsSecIcons .CPP {
+    }
+    .mainContainer.light .lastNewsSecIcons i {
+    }
+    .mainContainer.dark .lastNewsSecIcons i {
+    }
+    .lastNewsSecIcons i:hover {
+    }
+    .mainContainer.light .lastNewsSecIcons i.activate {
+    }
+    .mainContainer.dark .lastNewsSecIcons i.activate {
+    }
+
+    .lastNewsSecContent .subContent {
+    }
+    table {
+    }
+    .mainContainer.light table {
+    }
+    .mainContainer.dark table {
+    }
+    table thead {
+        font-size: 1em;
+    }
+    table th,
+    table td {
+    }
+    .mainContainer.dark table th,
+    .mainContainer.dark table td {
+    }
+    table tr {
+
+    }
+    .mainContainer.light table thead {
+    }
+    .mainContainer.dark table thead {
+    }
+    table thead th {
+    }
+    table tbody tr {
+    }
+    .mainContainer.light table tbody tr:nth-child(even) {
+    }
+    .mainContainer.dark table tbody tr:nth-child(even) {
+    }
+    tbody .subTitle {
+    }
+    tbody .subTitle a {
+    }
+    .mainContainer.light table tbody .subTitle a,
+    .mainContainer.light table tbody td {
+    }
+    .mainContainer.dark table tbody .subTitle a,
+    .mainContainer.dark table tbody td {
+    }
+    table .subWriter,
+    table .subDate {
+        width: 20%;
+    }
+    table .subWriter {
+    }
+    table .subDate {
+    }
+
+    .subActionCall {
+    }
+    .mainContainer.light .subActionCall {
+    }
+    .mainContainer.dark .subActionCall {
+    }
+    .subActionCall:hover {
+    }
+
+    .contactPage {
+    }
+    .contactPageInfo {
+        width: 100%;
+    }
+    .contactPage .contactContainer {
+        width: 95%;
+    }
+    .contactContainer .contactMsg {
+        width: 77.5%;
+        left: 0;
+    }
+    .mainContainer.light .contactContainer .contactMsg {
+    }
+    .mainContainer.dark .contactContainer .contactMsg {
+    }
+    .contactMsg .msgContent {
+    }
+    .msgContent h3 {
+        width: 100%;
+        left: 67%;
+    }
+    .mainContainer.dark .msgContent h3 {
+    }
+    .msgContent .inputBox {
+    }
+    .clintName {
+    }
+    .clintName div {
+    }
+    .msgContent form {
+    }
+    .msgContent form span {
+    }
+    .mainContainer.dark .msgContent form span {
+    }
+    .msgContent form input,
+    .msgContent form textarea {
+    }
+    .mainContainer.light .msgContent form input,
+    .mainContainer.light .msgContent form textarea {
+    }
+    .mainContainer.dark .msgContent form input,
+    .mainContainer.dark .msgContent form textarea {
+    }
+    .msgContent form textarea {
+    }
+    .msgContent form textarea::-webkit-scrollbar {
+    }
+    .msgContent form textarea::-webkit-scrollbar-thumb {
+    }
+    .mainContainer.light .msgContent form textarea::-webkit-scrollbar-thumb {
+    }
+    .mainContainer.dark .msgContent form textarea::-webkit-scrollbar-thumb {
+    }
+    .msgContent form button[type="submit"] {
+    }
+    .msgContent form button[type="submit"]:hover {
+    }
+    .mainContainer.light .msgContent form button[type="submit"] {
+    }
+    .mainContainer.dark .msgContent form button[type="submit"] {
+    }
+    .contactContainer .contactCard {
+        width: 37.5%;
+        right: 0;
+    }
+    .mainContainer.light .contactContainer .contactCard {
+    }
+    .mainContainer.dark .contactContainer .contactCard {
+    }
+    .contactCard .websiteInfo {
+    }
+    .websiteInfo a {
+    }
+    .websiteInfo a img {
+        width: 100%;
+    }
+    h6 {
+        font-size: 1.1em;
+    }
+    h6 .highLine {
+    }
+    .mainContainer.dark h6 .highLine {
+    }
+    h6 .Eng {
+    }
+
+    .contactCard .contactInfo {
+    }
+    /* Home Contact Section */
+    .homeContact {
+    }
+    .homeContact div {
+    }
+    .homeSocialCards {
+    }
+    .homeSocialCards div {
+    }
+    .homeSocialCards div:hover {
+    }
+    .mainContainer.dark .homeSocialCards div {
+    }
+    .mainContainer.light .homeSocialCards div:hover, 
+    .mainContainer.dark .homeSocialCards div:hover {
+    }
+
+    .homeSocialCards a {
+    }
+    .mainContainer.light .homeSocialCards a {
+    }
+    .mainContainer.dark .homeSocialCards a {
+    }
+    .mainContainer.light .homeSocialCards div:hover a {
+    }
+    .homeSocialCards div:hover.instagram {
+    }
+    .homeSocialCards div:hover.telegram {
+    }
+    .homeSocialCards div:hover.twitter {
+    }
+    .twitter {
+    }
+
+    .contactPage .footer {
+    }
+    .contactPage .footer h6 {
+    }
+    .mainContainer.dark .contactPage .footer h6 .highLine {
+    }
+    .footer .googleAdsense {
+    }
+    .footer .googleAdsense a {
+    }
+    .footer .googleAdsense a:hover {
+    }
+    .contactPage .footer p {
+    }
+    .contactPage .footer p a {
     }
 }

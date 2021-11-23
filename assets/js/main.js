@@ -194,9 +194,9 @@ if (date.getMinutes() < 10) {
     mintNow = String(date.getMinutes())
 }
 timeNow.innerHTML = `${String(hourNow)}:${String(mintNow)} ${amPm}`;
-window.setInterval(function () {
-    window.location.reload();
-}, 60000);
+// window.setInterval(function () {
+//     window.location.reload();
+// }, 60000);
 
 let lastNewsPrev = document.getElementById('lastNewsPrev')
 let lastNewsNext = document.getElementById('lastNewsNext')
@@ -213,6 +213,11 @@ lastNewsSections.forEach(function (item, ind) {
         item.classList.add('activate')
     }
 })
+lastNewsIcons.forEach(function (item, ind) {
+    if (ind === lastNewsCounter) {
+        item.classList.add('activate')
+    }
+})
 lastNewsPrev.onclick = function () {
     if (lastNewsCounter !== 0) {
         lastNewsCounter -= 1;
@@ -222,7 +227,11 @@ lastNewsPrev.onclick = function () {
     lastNewsSections.forEach(function (item) {
         item.classList.remove('activate')
     })
+    lastNewsIcons.forEach(function (item) {
+        item.classList.remove('activate')
+    })
     lastNewsSections[lastNewsCounter].classList.add('activate');
+    lastNewsIcons[lastNewsCounter].classList.add('activate');
     window.localStorage.setItem('lastNewsCounter', String(lastNewsCounter))
 }
 lastNewsNext.onclick = function () {
@@ -234,7 +243,11 @@ lastNewsNext.onclick = function () {
     lastNewsSections.forEach(function (item) {
         item.classList.remove('activate')
     })
+    lastNewsIcons.forEach(function (item) {
+        item.classList.remove('activate')
+    })
     lastNewsSections[lastNewsCounter].classList.add('activate');
+    lastNewsIcons[lastNewsCounter].classList.add('activate');
     window.localStorage.setItem('lastNewsCounter', String(lastNewsCounter))
 }
 lastNewsIcons.forEach(function (icon, index) {
@@ -247,10 +260,19 @@ lastNewsIcons.forEach(function (icon, index) {
                 window.localStorage.setItem('lastNewsCounter', String(lastNewsCounter))
             }
         })
+        lastNewsIcons.forEach(function (item, ind) {
+            item.classList.remove('activate')
+            if (index === ind) {
+                item.classList.add('activate')
+            }
+        })
     }
 })
 function lastNewsSlide() {
     lastNewsSections.forEach(function (item) {
+        item.classList.remove('activate')
+    });
+    lastNewsIcons.forEach(function (item) {
         item.classList.remove('activate')
     });
     if (lastNewsCounter === 5) {
@@ -259,13 +281,20 @@ function lastNewsSlide() {
         lastNewsCounter += 1;
     }
     lastNewsSections[lastNewsCounter].classList.add('activate')
+    lastNewsIcons[lastNewsCounter].classList.add('activate')
     window.localStorage.setItem('lastNewsCounter', String(lastNewsCounter))
 }
-let slide = window.setInterval(lastNewsSlide, 3000)
+let slide = window.setInterval(lastNewsSlide, 10000)
 document.querySelector('.lastNewsSection').onmouseover = function () {
     clearInterval(slide)
 }
 document.querySelector('.lastNewsSection').onmouseleave = function () {
-    slide = window.setInterval(lastNewsSlide, 3000)
+    slide = window.setInterval(lastNewsSlide, 10000)
 }
-document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3)}, 325px)`
+if (window.innerWidth < 481) {
+    document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3) + 1}, 225px)`
+} else if (window.innerWidth < 769) {
+    document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3)}, 240px)`
+} else {
+    document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3)}, 325px)`
+}
