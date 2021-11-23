@@ -83,8 +83,6 @@ html {
 .navContainer {
     position: fixed;
     width: 15%;
-    /* height: 969px; */
-    height: 1041px;
     right: 0;
     border-radius: 20px 0 0 20px;
     -webkit-transition: 0.5s;
@@ -384,7 +382,6 @@ html {
 .mainContainer {
     position: relative;
     width: 85%;
-    min-height: 969px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -554,8 +551,6 @@ html {
 .sectionsPage,
 .lastNewsPage,
 .contactPage {
-    /* min-height: 990px; */
-    min-height: 1041px;
     padding-top: 75px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1679,8 +1674,6 @@ table .subDate {
 .contactPageInfo {
     position: relative;
     width: 85%;
-    height: 100px;
-    margin-top: 25px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -1690,8 +1683,6 @@ table .subDate {
 .contactPage .contactContainer {
     position: relative;
     width: 85%;
-    height: 625px;
-    /* height: 575px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2010,9 +2001,6 @@ h6 .Eng {
 
 .contactPage .footer {
     width: 75%;
-    height: 200px;
-    /* height: 135px; */
-    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2020,7 +2008,6 @@ h6 .Eng {
 }
 .contactPage .footer h6 {
     margin: 0;
-    margin-bottom: 15px;
 }
 .mainContainer.dark .contactPage .footer h6 .highLine {
     color: var(--grayWhite);
@@ -2043,7 +2030,6 @@ h6 .Eng {
     background-color: rgba(238, 238, 238, 0.25);
 }
 .contactPage .footer p {
-    margin-top: 10px;
     letter-spacing: 1px;
     font-family: var(--mainArFont);
     color: var(--grayWhite);

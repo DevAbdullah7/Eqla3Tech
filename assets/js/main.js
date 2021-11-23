@@ -1,3 +1,12 @@
+document.querySelector('.navContainer').style['height'] = `${window.innerHeight}px`
+document.querySelector('.mainContainer').style['min-height'] = `${window.innerHeight}px`
+document.querySelector('.homePage').style['min-height'] = `${(window.innerHeight)}px`
+document.querySelector('.sectionsPage').style['min-height'] = `${window.innerHeight}px`
+document.querySelector('.lastNewsPage').style['min-height'] = `${window.innerHeight}px`
+document.querySelector('.contactPage').style['min-height'] = `${window.innerHeight}px`
+document.querySelector('.contactPageInfo').style['height'] = `${((window.innerHeight - 75) * 7.5) / 100}px`
+document.querySelector('.contactContainer').style['height'] = `${((window.innerHeight - 75) * 75.5) / 100}px`
+document.querySelector('.footer').style['height'] = `${((window.innerHeight - 75) * 17) / 100}px`
 // Navbar
 // Add hoverd class to website sections
 let home = document.querySelector('.home');

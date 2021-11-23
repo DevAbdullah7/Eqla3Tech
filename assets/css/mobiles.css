@@ -779,10 +779,11 @@ html {
     .mainContainer.dark .contactContainer .contactMsg {
     }
     .contactMsg .msgContent {
-        padding-top: 40%;
+        width: 100%;
+        padding-top: 62%;
     }
     .msgContent h3 {
-        visibility: hidden;
+        display: none;
     }
     .mainContainer.dark .msgContent h3 {
     }
@@ -803,7 +804,7 @@ html {
     .msgContent form textarea {
     }
     .msgContent form textarea {
-        height: 30%;
+        height: 25%;
     }
     .mainContainer.light .msgContent form input,
     .mainContainer.light .msgContent form textarea {
@@ -822,7 +823,9 @@ html {
     .mainContainer.dark .msgContent form textarea::-webkit-scrollbar-thumb {
     }
     .msgContent form button[type="submit"] {
-        bottom: 17.5%;
+        position: relative;
+        bottom: 0%;
+        left: 32%;
     }
     .msgContent form button[type="submit"]:hover {
     }
@@ -895,8 +898,8 @@ html {
     }
 
     .contactPage .footer {
+        width: 90%;
         justify-content: flex-end;
-        padding-bottom: 10px;
     }
     .contactPage .footer h6 {
     }
@@ -905,6 +908,8 @@ html {
     .footer .googleAdsense {
     }
     .footer .googleAdsense a {
+        font-size: 0.8em;
+        margin: 5px;
     }
     .footer .googleAdsense a:hover {
     }
