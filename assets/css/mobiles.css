@@ -32,12 +32,11 @@
     /* Navbar */
     .navContainer {
         width: 0;
-        height: 700px;
         border: none !important;
         -webkit-transition: 0.5s;
         -o-transition: 0.5s;
         transition: 0.5s;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
     .navContainer.activate {
         width: 90%;
