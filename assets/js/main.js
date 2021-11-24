@@ -93,6 +93,7 @@ menuMobile.onclick = function () {
     mainContainer.classList.toggle('activate');
     topBar.classList.toggle('activate')
     document.querySelector('.html').style['overflow-y'] = 'hidden'
+    document.querySelector('.navContent').style['height'] = `${window.innerHeight}px`
 }
 navMobileMenu.onclick = function () {
     menuMobile.classList.toggle('activate');
