@@ -1,5 +1,5 @@
 // Responsive Height ^_^
-document.querySelector('.navContainer').style['height'] = `${window.innerHeight}px`
+document.querySelector('.navContent').style['height'] = `${window.innerHeight}px`
 document.querySelector('.mainContainer').style['min-height'] = `${window.innerHeight}px`
 document.querySelector('.homePage').style['min-height'] = `${(window.innerHeight)}px`
 document.querySelector('.sectionsPage').style['min-height'] = `${window.innerHeight}px`
