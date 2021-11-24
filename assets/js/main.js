@@ -304,7 +304,7 @@ document.querySelector('.lastNewsSection').onmouseleave = function () {
 if (window.innerWidth < 481) {
     document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3) + 1}, 225px)`
 } else if (window.innerWidth < 769) {
-    document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3)}, 240px)`
+    document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3) + 1}, 240px)`
 } else {
     document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3)}, 325px)`
 }
