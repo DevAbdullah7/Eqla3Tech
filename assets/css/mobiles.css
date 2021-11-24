@@ -1,37 +1,38 @@
 @media only screen and (max-width: 480px){
     * {
-}
-html {
-}
-.html.light::-webkit-scrollbar {
-    display: none;
-}
-.html.dark::-webkit-scrollbar {
-    display: none;
-}
-.html::-webkit-scrollbar-thumb {
-    display: none;
-}
-.body {
-}
-.body.dark {
-}
-.body::after {
-}
-.body.light::after {
-    background: url('../media/backGroundMobile.png');
-    background-size: cover;
-}
-.body.dark::after {
-    background: url('../media/backGroundDarkMobile.png');
-    background-size: cover;
-}
-.body.dark::after {
-}
+    }
+    html {
+    }
+    .html.light::-webkit-scrollbar {
+        display: none;
+    }
+    .html.dark::-webkit-scrollbar {
+        display: none;
+    }
+    .html::-webkit-scrollbar-thumb {
+        display: none;
+    }
+    .body {
+    }
+    .body.dark {
+    }
+    .body::after {
+    }
+    .body.light::after {
+        background: url('../media/backGroundMobile.png');
+        background-size: cover;
+    }
+    .body.dark::after {
+        background: url('../media/backGroundDarkMobile.png');
+        background-size: cover;
+    }
+    .body.dark::after {
+    }
     /* ======================================= */
     /* Navbar */
     .navContainer {
         width: 0;
+        height: 700px;
         border: none !important;
         -webkit-transition: 0.5s;
         -o-transition: 0.5s;
