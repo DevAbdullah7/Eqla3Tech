@@ -597,6 +597,7 @@ html {
     .lastNewsPage {
     }
     .lastNewsContent {
+        justify-content: flex-start;
     }
     .mainContainer.light .lastNewsContent {
     }
@@ -608,7 +609,8 @@ html {
     }
     .lastNewsInfo {
         width: 100%;
-        transform: translateY(-75%);
+        height: 6%;
+        transform: none;
     }
     .lastNewsInfo div {
     }
@@ -619,6 +621,7 @@ html {
     }
     .lastNewsSection {
         width: 100%;
+        height: 88%;
         margin: 0;
     }
     .lastNewsDetail {
@@ -638,7 +641,7 @@ html {
     .mainContainer.dark .lastNewsImg {
     }
     .lastNewsControls {
-        width: 60%;
+        width: 70%;
     }
     .mainContainer.light .lastNewsControls {
     }
@@ -657,9 +660,12 @@ html {
     .lastNewsSecContent.activate {
     }
     .lastNewsSecContent .subInfo {
+        height: 11%;
+        top: -8.5%;
+        justify-content: center;
     }
     .lastNewsSecContent .subInfo .subImg {
-        font-size: 2.5em;
+        font-size: 2em;
         transform: none;
     }
     .lastNewsSecContent .subInfo .subTitle {

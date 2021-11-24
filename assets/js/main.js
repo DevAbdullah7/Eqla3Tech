@@ -3,6 +3,7 @@ document.querySelector('.mainContainer').style['min-height'] = `${window.innerHe
 document.querySelector('.homePage').style['min-height'] = `${(window.innerHeight)}px`
 document.querySelector('.sectionsPage').style['min-height'] = `${window.innerHeight}px`
 document.querySelector('.lastNewsPage').style['min-height'] = `${window.innerHeight}px`
+document.querySelector('.lastNewsContent').style['height'] = `${window.innerHeight}px`
 document.querySelector('.contactPage').style['min-height'] = `${window.innerHeight}px`
 document.querySelector('.contactPageInfo').style['height'] = `${((window.innerHeight - 75) * 7.5) / 100}px`
 document.querySelector('.contactContainer').style['height'] = `${((window.innerHeight - 75) * 75.5) / 100}px`
