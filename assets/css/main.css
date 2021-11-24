@@ -1146,7 +1146,7 @@ html {
     z-index: 1;
 }
 .sectionDetail .sectionImg {
-    font-size: 3em;
+    font-size: 2.5em;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     transition: 0.5s;
 }
@@ -1197,9 +1197,9 @@ html {
     transform: scale(1.25)
 }
 .sectionControls p {
-    width: 250px;
+    width: 450px;
     margin: 0 25px;
-    font-size: 1.5em;
+    font-size: 1.1em;
     text-align: center;
     font-family: var(--mainArFont);
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);

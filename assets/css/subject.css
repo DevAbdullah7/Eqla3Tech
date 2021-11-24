@@ -6,16 +6,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    overflow-y: scroll;
-}
-.subject::-webkit-scrollbar {
-    background-color: transparent;
-    width: 7.5px;
-    border-radius: 5px;
-}
-.subject::-webkit-scrollbar-thumb {
-    border-radius: 25px;
-    background-color: var(--navSkyBlue);
+    overflow: scroll;
 }
 .subject .subjectInfo {
     position: absolute;
@@ -28,5 +19,28 @@
     font-family: var(--mainArFont);
 }
 .subject .subjectContent {
+    text-align: center;
     font-family: var(--mainArFont);
+    overflow: scroll 
+}
+.mainContainer.dark .subject {
+    color: var(--grayWhite);
+}
+.subject::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0px;
+}
+.subject .subjectContent::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7.5px;
+    border-radius: 5px;
+}
+.subject .subjectContent::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+}
+.mainContainer.light .subject .subjectContent::-webkit-scrollbar-thumb {
+    background-color: var(--navSkyBlue);
+}
+.mainContainer.dark .subject .subjectContent::-webkit-scrollbar-thumb {
+    background-color: var(--grayBlack);
 }

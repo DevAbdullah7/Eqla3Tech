@@ -1,18 +1,20 @@
 // Responsive Height ^_^
-document.querySelector('.navContent').style['height'] = `${window.innerHeight}px`
-document.querySelector('.mainContainer').style['min-height'] = `${window.innerHeight}px`
-document.querySelector('.homePage').style['min-height'] = `${(window.innerHeight)}px`
-document.querySelector('.sectionsPage').style['min-height'] = `${window.innerHeight}px`
-document.querySelector('.lastNewsPage').style['min-height'] = `${window.innerHeight}px`
-document.querySelector('.lastNewsContent').style['height'] = `${window.innerHeight}px`
-document.querySelector('.contactPage').style['min-height'] = `${window.innerHeight}px`
-document.querySelector('.contactPageInfo').style['height'] = `${((window.innerHeight - 75) * 7.5) / 100}px`
-document.querySelector('.contactContainer').style['height'] = `${((window.innerHeight - 75) * 75.5) / 100}px`
-document.querySelector('.footer').style['height'] = `${((window.innerHeight - 75) * 17) / 100}px`
-// window.setInterval(function () {
-//     window.location.reload()
-// }, 3000)
-// Navbar
+if (window.location.pathname.split('/')[window.location.pathname.split('/').length - 1] === 'index.html') {
+    document.querySelector('.navContent').style['height'] = `${window.innerHeight}px`
+    document.querySelector('.mainContainer').style['min-height'] = `${window.innerHeight}px`
+    document.querySelector('.homePage').style['min-height'] = `${(window.innerHeight)}px`
+    document.querySelector('.sectionsPage').style['min-height'] = `${window.innerHeight}px`
+    document.querySelector('.lastNewsPage').style['min-height'] = `${window.innerHeight}px`
+    document.querySelector('.lastNewsContent').style['height'] = `${window.innerHeight}px`
+    document.querySelector('.contactPage').style['min-height'] = `${window.innerHeight}px`
+    document.querySelector('.contactPageInfo').style['height'] = `${((window.innerHeight - 75) * 7.5) / 100}px`
+    document.querySelector('.contactContainer').style['height'] = `${((window.innerHeight - 75) * 75.5) / 100}px`
+    document.querySelector('.footer').style['height'] = `${((window.innerHeight - 75) * 17) / 100}px`
+} else if (window.location.pathname.split('/')[window.location.pathname.split('/').length - 1] === 'subject.html') {
+    document.querySelector('.navContent').style['height'] = `${window.innerHeight}px`
+    document.querySelector('.mainContainer').style['min-height'] = `${window.innerHeight}px`
+    document.querySelector('.subjectsContainer').style['height'] = `${Math.ceil((window.innerHeight * 92.15) / 100)}px`
+}
 // Add hoverd class to website sections
 let home = document.querySelector('.home');
 let html = document.querySelector('.html');

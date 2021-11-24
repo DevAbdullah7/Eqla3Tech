@@ -464,6 +464,7 @@
     .sectionControls a:hover {
     }
     .sectionControls p {
+        width: 350px;
     }
     .mainContainer.dark .sectionControls p {
     }
