@@ -9,6 +9,9 @@ document.querySelector('.contactPage').style['min-height'] = `${window.innerHeig
 document.querySelector('.contactPageInfo').style['height'] = `${((window.innerHeight - 75) * 7.5) / 100}px`
 document.querySelector('.contactContainer').style['height'] = `${((window.innerHeight - 75) * 75.5) / 100}px`
 document.querySelector('.footer').style['height'] = `${((window.innerHeight - 75) * 17) / 100}px`
+// window.setInterval(function () {
+//     window.location.reload()
+// }, 3000)
 // Navbar
 // Add hoverd class to website sections
 let home = document.querySelector('.home');
@@ -35,6 +38,9 @@ home.onclick = function putHomeClicked() {
     navContainer.classList.toggle('activate');
     mainContainer.classList.toggle('activate');
     topBar.classList.toggle('activate')
+    if (window.innerWidth < 480) {
+        document.querySelector('.html').style['overflow-y'] = 'visible'
+    }
 };
 sections.onclick = function putSectionsClicked() {
     if (window.innerWidth < 480) {
@@ -47,6 +53,9 @@ sections.onclick = function putSectionsClicked() {
     navContainer.classList.toggle('activate');
     mainContainer.classList.toggle('activate');
     topBar.classList.toggle('activate')
+    if (window.innerWidth < 480) {
+        document.querySelector('.html').style['overflow-y'] = 'visible'
+    }
 };
 lastNews.onclick = function () {
     if (window.innerWidth < 480) {
@@ -59,6 +68,9 @@ lastNews.onclick = function () {
     navContainer.classList.toggle('activate');
     mainContainer.classList.toggle('activate');
     topBar.classList.toggle('activate')
+    if (window.innerWidth < 480) {
+        document.querySelector('.html').style['overflow-y'] = 'visible'
+    }
 };
 contact.onclick = function () {
     if (window.innerWidth < 480) {
@@ -71,18 +83,23 @@ contact.onclick = function () {
     navContainer.classList.toggle('activate');
     mainContainer.classList.toggle('activate');
     topBar.classList.toggle('activate')
+    if (window.innerWidth < 480) {
+        document.querySelector('.html').style['overflow-y'] = 'visible'
+    }
 };
 menuMobile.onclick = function () {
     menuMobile.classList.toggle('activate');
     navContainer.classList.toggle('activate');
     mainContainer.classList.toggle('activate');
     topBar.classList.toggle('activate')
+    document.querySelector('.html').style['overflow-y'] = 'hidden'
 }
 navMobileMenu.onclick = function () {
     menuMobile.classList.toggle('activate');
     navContainer.classList.toggle('activate');
     mainContainer.classList.toggle('activate');
     topBar.classList.toggle('activate')
+    document.querySelector('.html').style['overflow-y'] = 'visible'
 }
 // let navBarClicke = function scrollHeightly(width, height) {
 //     let width = window.innerWidth;
