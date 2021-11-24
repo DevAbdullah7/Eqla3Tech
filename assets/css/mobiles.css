@@ -36,7 +36,7 @@
         -webkit-transition: 0.5s;
         -o-transition: 0.5s;
         transition: 0.5s;
-        /* overflow: hidden; */
+        overflow: hidden;
     }
     .navContainer.activate {
         width: 90%;
@@ -269,6 +269,7 @@
     .sectionsPage,
     .lastNewsPage,
     .contactPage {
+        overflow: hidden;
     }
     .mainContainer.dark .homePage {
     }
