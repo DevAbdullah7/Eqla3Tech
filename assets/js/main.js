@@ -14,6 +14,9 @@ if (window.location.pathname.split('/')[window.location.pathname.split('/').leng
     document.querySelector('.navContent').style['height'] = `${window.innerHeight}px`
     document.querySelector('.mainContainer').style['min-height'] = `${window.innerHeight}px`
     document.querySelector('.subjectsContainer').style['height'] = `${Math.ceil((window.innerHeight * 92.15) / 100)}px`
+} else {
+    document.querySelector('.navContent').style['height'] = `${window.innerHeight}px`
+    document.querySelector('.mainContainer').style['min-height'] = `${window.innerHeight}px`
 }
 // Add hoverd class to website sections
 let home = document.querySelector('.home');
