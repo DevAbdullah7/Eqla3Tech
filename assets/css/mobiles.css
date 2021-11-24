@@ -275,13 +275,11 @@ html {
     #particles-js {
     }
     .homeContent {
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
     }
     .homeContent div {
-        position: relative;
-        flex-direction: column;
     }
 
     /* Home Info Section */
