@@ -1,22 +1,24 @@
 // Responsive Height ^_^
-if (window.location.pathname.split('/')[window.location.pathname.split('/').length - 1] === 'index.html') {
-    document.querySelector('.navContent').style['height'] = `${window.innerHeight}px`
-    document.querySelector('.mainContainer').style['min-height'] = `${window.innerHeight}px`
+document.querySelector('.navContent').style['height'] = `${window.innerHeight}px`
+document.querySelector('.mainContainer').style['min-height'] = `${window.innerHeight}px`
+if (document.querySelector('.homePage')) {
     document.querySelector('.homePage').style['min-height'] = `${(window.innerHeight)}px`
+}
+if (document.querySelector('.sectionsPage')) {
     document.querySelector('.sectionsPage').style['min-height'] = `${window.innerHeight}px`
+}
+if (document.querySelector('.subjectsContainer')) {
+    document.querySelector('.subjectsContainer').style['height'] = `${Math.ceil((window.innerHeight * 92.15) / 100)}px`
+}
+if (document.querySelector('.lastNewsPage')) {
     document.querySelector('.lastNewsPage').style['min-height'] = `${window.innerHeight}px`
     document.querySelector('.lastNewsContent').style['height'] = `${window.innerHeight}px`
+}
+if (document.querySelector('.contactPage')) {
     document.querySelector('.contactPage').style['min-height'] = `${window.innerHeight}px`
     document.querySelector('.contactPageInfo').style['height'] = `${((window.innerHeight - 75) * 7.5) / 100}px`
     document.querySelector('.contactContainer').style['height'] = `${((window.innerHeight - 75) * 75.5) / 100}px`
     document.querySelector('.footer').style['height'] = `${((window.innerHeight - 75) * 17) / 100}px`
-} else if (window.location.pathname.split('/')[window.location.pathname.split('/').length - 1] === 'subject.html') {
-    document.querySelector('.navContent').style['height'] = `${window.innerHeight}px`
-    document.querySelector('.mainContainer').style['min-height'] = `${window.innerHeight}px`
-    document.querySelector('.subjectsContainer').style['height'] = `${Math.ceil((window.innerHeight * 92.15) / 100)}px`
-} else {
-    document.querySelector('.navContent').style['height'] = `${window.innerHeight}px`
-    document.querySelector('.mainContainer').style['min-height'] = `${window.innerHeight}px`
 }
 // Add hoverd class to website sections
 let home = document.querySelector('.home');
@@ -326,7 +328,7 @@ document.querySelector('.lastNewsSection').onmouseleave = function () {
     slide = window.setInterval(lastNewsSlide, 10000)
 }
 if (window.innerWidth < 481) {
-    document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3) + 1}, 225px)`
+    document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3) + 2}, 225px)`
 } else if (window.innerWidth < 769) {
     document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3) + 1}, 240px)`
 } else {
