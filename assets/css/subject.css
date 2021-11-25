@@ -21,7 +21,7 @@
 .subject .subjectContent {
     text-align: center;
     font-family: var(--mainArFont);
-    overflow: scroll 
+    overflow-y: scroll; 
 }
 .mainContainer.dark .subject {
     color: var(--grayWhite);

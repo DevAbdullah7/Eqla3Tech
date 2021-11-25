@@ -7,7 +7,9 @@ if (document.querySelector('.homePage')) {
 }
 if (document.querySelector('.sectionsPage')) {
     document.querySelector('.sectionsPage').style['min-height'] = `${window.innerHeight}px`
-    document.querySelector('.sectionsContent').style['min-height'] = `${(window.innerHeight - 75)}px`
+    if (document.querySelector('.sectionsContent')) {
+        document.querySelector('.sectionsContent').style['min-height'] = `${(window.innerHeight - 75)}px`
+    }
 }
 if (document.querySelector('.subjectsContainer')) {
     document.querySelector('.subjectsContainer').style['height'] = `${Math.ceil((window.innerHeight * 92.15) / 100)}px`
