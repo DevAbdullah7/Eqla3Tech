@@ -269,7 +269,7 @@
     .sectionsPage,
     .lastNewsPage,
     .contactPage {
-        overflow: hidden;
+        /* overflow: hidden; */
     }
     .mainContainer.dark .homePage {
     }
