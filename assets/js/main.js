@@ -3,6 +3,7 @@ document.querySelector('.navContent').style['height'] = `${window.innerHeight}px
 document.querySelector('.mainContainer').style['min-height'] = `${window.innerHeight}px`
 if (document.querySelector('.homePage')) {
     document.querySelector('.homePage').style['min-height'] = `${(window.innerHeight)}px`
+    document.querySelector('.homeContent').style['height'] = `${(window.innerHeight - 75)}px`
 }
 if (document.querySelector('.sectionsPage')) {
     document.querySelector('.sectionsPage').style['min-height'] = `${window.innerHeight}px`

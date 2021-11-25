@@ -273,8 +273,6 @@
     }
     .mainContainer.dark .homePage {
     }
-    #particles-js {
-    }
     .homeContent {
         -webkit-box-align: center;
             -ms-flex-align: center;
@@ -286,12 +284,12 @@
     /* Home Info Section */
     .homeContent .homeInfo {
         width: 100%;
-        height: 45%;
+        height: 35%;
         top: 5%;
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start;
-        margin-top: 5%;
+        margin-top: 0;
     }
     .homeInfo .homeLogoImg,
     .homeInfo .homeInfoTitle, 
@@ -308,17 +306,17 @@
     .mainContainer.dark .homeInfo .dark {
     }
     .homeInfo .homeLogoImg {
-        height: 20%;
+        height: 28%;
     }
     .homeInfo .homeLogoImg img {
-        width: 55%;
+        width: 50%;
     }
 
     /* Title */
     .homeInfo .homeInfoTitle {
     }
     .homeInfoTitle h6 {
-        font-size: 1.75em;
+        font-size: 1.5em;
     }
     .homeInfoTitle .Eng {
     }
@@ -335,7 +333,8 @@
     .mainContainer.dark .homeInfoTitle h6 span {
     }
     .homeInfoTitle p {
-        font-size: 0.95em;
+        font-size: 0.85em;
+        text-align: center;
     }
     .mainContainer.light .homeInfoTitle p {
     }
@@ -345,19 +344,21 @@
     /* Action Call Btns */
     .homeInfo .homeBtns {
         width: 100%;
+        height: 20%;
+        margin-top: 5px;
     }
-    .homeBtns div {
+    .homeBtns a {
         height: 30px;
         font-size: 1em;
     }
-    .mainContainer.light .homeBtns div {
+    .mainContainer.light .homeBtns a {
         background: var(--navSkyBlue);
         border: 1px solid var(--navSkyBlue);
     }
-    .mainContainer.dark .homeBtns div {
+    .mainContainer.dark .homeBtns a {
         background: -o-linear-gradient(315deg, rgba(53,53,53,1) 60%, rgba(22,22,22,1) 150%);
         background: linear-gradient(135deg, rgba(53,53,53,1) 60%, rgba(22,22,22,1) 150%);
-        border: 2px solid #333;
+        border: 1px solid #333;
     }
     .homeBtns div:hover {
     }
@@ -366,43 +367,10 @@
     .homeBtns div:hover a {
     }
 
-    /* Home Contact Section */
-    .homeContact {
-        width: 100%;
-        bottom: 5%;
-        z-index: 1;
-    }
-    .homeContact div {
-    }
-    .homeSocialCards {
-    }
-    .mainContainer.light .homeSocialCards div {
-        border: 1px solid var(--grayWhite);
-    }
-    .homeSocialCards div:hover {
-    }
-    .homeSocialCards a {
-    }
-    .mainContainer.light .homeSocialCards a {
-        color: var(--grayWhite);
-    }
-    .mainContainer.dark .homeSocialCards a {
-    }
-    .mainContainer.light .homeSocialCards div:hover a {
-    }
-    .homeSocialCards div:hover.instagram {
-    }
-    .homeSocialCards div:hover.telegram {
-    }
-    .homeSocialCards div:hover.twitter {
-    }
-    .twitter {
-    }
-
     /* Home Background Section  */
     .homeContent .homeBackDesign {
         width: 85%;
-        height: 85%;
+        height: 60%;
         bottom: 0;
     }
     .homeBackDesign .svgContainer {
@@ -938,5 +906,38 @@
         text-align: center;
     }
     .contactPage .footer p a {
+    }
+    
+    /* Home Contact Section */
+    .homeContact {
+        width: 100%;
+        bottom: 5%;
+        z-index: 1;
+    }
+    .homeContact div {
+    }
+    .homeSocialCards {
+    }
+    .mainContainer.light .homeSocialCards div {
+        border: 1px solid var(--grayWhite);
+    }
+    .homeSocialCards div:hover {
+    }
+    .homeSocialCards a {
+    }
+    .mainContainer.light .homeSocialCards a {
+        color: var(--grayWhite);
+    }
+    .mainContainer.dark .homeSocialCards a {
+    }
+    .mainContainer.light .homeSocialCards div:hover a {
+    }
+    .homeSocialCards div:hover.instagram {
+    }
+    .homeSocialCards div:hover.telegram {
+    }
+    .homeSocialCards div:hover.twitter {
+    }
+    .twitter {
     }
 }
