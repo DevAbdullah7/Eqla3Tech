@@ -23,10 +23,13 @@ if (document.querySelector('.lastNewsPage')) {
     }
 }
 if (document.querySelector('.contactPage')) {
-    document.querySelector('.contactPage').style['min-height'] = `${window.innerHeight}px`
+    document.querySelector('.contactPage').style['min-height'] = `${window.innerHeight - 10}px`
     document.querySelector('.contactPageInfo').style['height'] = `${((window.innerHeight - 75) * 7.5) / 100}px`
     document.querySelector('.contactContainer').style['height'] = `${((window.innerHeight - 75) * 75.5) / 100}px`
     document.querySelector('.footer').style['height'] = `${((window.innerHeight - 75) * 17) / 100}px`
+}
+if (document.querySelector('.googleAdenses')) {
+    document.querySelector('.googleAdenses').style['min-height'] = `${window.innerHeight}px`
 }
 // Add hoverd class to website sections
 let home = document.querySelector('.home');

@@ -44,3 +44,20 @@
 .mainContainer.dark .subject .subjectContent::-webkit-scrollbar-thumb {
     background-color: var(--grayBlack);
 }
+
+.googleAdenses,
+.usageAgreement {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 75px;
+    display: flex;
+    align-items: flex-start;
+}
+.googleAdensesContent,
+.usageAgreementContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+}
