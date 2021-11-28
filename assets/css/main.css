@@ -1285,7 +1285,7 @@ html {
 .lastNewsContent {
     position: relative;
     width: 100%;
-    min-height: 969px;
+    /* min-height: 969px; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

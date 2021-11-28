@@ -17,6 +17,10 @@ if (document.querySelector('.subjectsContainer')) {
 if (document.querySelector('.lastNewsPage')) {
     document.querySelector('.lastNewsPage').style['min-height'] = `${window.innerHeight}px`
     document.querySelector('.lastNewsContent').style['height'] = `${window.innerHeight}px`
+    if (window.innerWidth < 480) {
+        document.querySelector('.lastNewsInfo').style['height'] = `${(window.innerHeight * 15) / 100}px`
+        document.querySelector('.lastNewsContainer').style['min-height'] = `${(window.innerHeight * 75) / 100}px`
+    }
 }
 if (document.querySelector('.contactPage')) {
     document.querySelector('.contactPage').style['min-height'] = `${window.innerHeight}px`

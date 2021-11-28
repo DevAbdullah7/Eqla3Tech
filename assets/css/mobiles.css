@@ -601,7 +601,6 @@
     }
     .lastNewsInfo {
         width: 100%;
-        height: 4%;
         transform: none;
         justify-content: center;
     }
@@ -611,12 +610,12 @@
     .lastNewsContainer {
         width: 100%;
         padding: 7px;
-        margin-top: 10%;
+        margin-top: 5%;
         align-items: flex-start;
     }
     .lastNewsSection {
         width: 100%;
-        height: 63%;
+        height: 90%;
         margin: 0;
     }
     .lastNewsDetail {
