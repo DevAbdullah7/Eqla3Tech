@@ -597,6 +597,8 @@
     .subjectsContent {
     }
     .subjectsContent .subjects {
+        padding: 15px;
+        overflow-y: scroll;
     }
 
     .subjectsControls {
@@ -753,6 +755,7 @@
     .lastNewsSecContent .subContent {
     }
     table {
+        padding: 25px 0;
     }
     .mainContainer.light table {
     }
