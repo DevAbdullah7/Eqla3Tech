@@ -2505,8 +2505,8 @@ h6 .Eng {
     z-index: 1000;
 }
 
-.contactPage .footer {
-    width: 75%;
+.footer {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2521,10 +2521,10 @@ h6 .Eng {
         -ms-flex-direction: column;
             flex-direction: column;
 }
-.contactPage .footer h6 {
+.footer h6 {
     margin: 0;
 }
-.mainContainer.dark .contactPage .footer h6 .highLine {
+.mainContainer.dark .footer h6 .highLine {
     color: var(--grayWhite);
 }
 .footer .googleAdsense {
@@ -2546,13 +2546,13 @@ h6 .Eng {
 .footer .googleAdsense a:hover {
     background-color: rgba(238, 238, 238, 0.25);
 }
-.contactPage .footer p {
+.footer p {
     letter-spacing: 1px;
     font-family: var(--mainArFont);
     color: var(--grayWhite);
     text-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
 }
-.contactPage .footer p a {
+.footer p a {
     text-decoration: none;
     color: var(--grayWhite);
 }

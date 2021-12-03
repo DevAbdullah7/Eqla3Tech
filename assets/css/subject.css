@@ -19,6 +19,8 @@
     font-family: var(--mainArFont);
 }
 .subject .subjectContent {
+    width: 100%;
+    height: 100%;
     text-align: center;
     font-family: var(--mainArFont);
     overflow-y: scroll; 
