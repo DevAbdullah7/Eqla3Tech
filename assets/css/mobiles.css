@@ -960,15 +960,15 @@
     .twitter {
     }
 
-    .contactPage .footer {
+    .footer {
         width: 90%;
         -webkit-box-pack: end;
             -ms-flex-pack: end;
                 justify-content: flex-end;
     }
-    .contactPage .footer h6 {
+    .footer h6 {
     }
-    .mainContainer.dark .contactPage .footer h6 .highLine {
+    .mainContainer.dark .footer h6 .highLine {
     }
     .footer .googleAdsense {
     }
@@ -978,10 +978,10 @@
     }
     .footer .googleAdsense a:hover {
     }
-    .contactPage .footer p {
+    .footer p {
         text-align: center;
     }
-    .contactPage .footer p a {
+    .footer p a {
     }
     
     /* Home Contact Section */

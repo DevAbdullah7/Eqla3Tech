@@ -25,6 +25,11 @@
     font-family: var(--mainArFont);
     overflow-y: scroll; 
 }
+.subject .subjectContent img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
 .mainContainer.dark .subject {
     color: var(--grayWhite);
 }

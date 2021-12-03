@@ -2547,6 +2547,7 @@ h6 .Eng {
     background-color: rgba(238, 238, 238, 0.25);
 }
 .footer p {
+    text-align: center;
     letter-spacing: 1px;
     font-family: var(--mainArFont);
     color: var(--grayWhite);
