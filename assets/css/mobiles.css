@@ -431,7 +431,7 @@
     .sectionsInfo div {
     }
     .infoContent {
-        height: 70px;
+        height: 60px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -453,7 +453,7 @@
     }
     .websiteControls {
         width: 75%;
-        top: 15%;
+        top: 25%;
     }
     .websiteControls a {
         width: 40px;
@@ -530,6 +530,7 @@
     .subjectsContainer .contentContainer {
     }
     .subjectsContainer .backBtn {
+        transform: translateY(-25%);
     }
     .backBtn .btnShape {
     }
@@ -539,6 +540,9 @@
         font-size: 1em;
     }
     .mainContainer.light .backBtn .btnShape {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
     }
     .mainContainer.light .backBtn .btnTitle {
     }
@@ -560,9 +564,7 @@
     }
     .sectionDetail .sectionImg {
         font-size: 2em;
-        -webkit-transform: translateY(-25px);
-            -ms-transform: translateY(-25px);
-                transform: translateY(-25px);
+        transform: none;
     }
     .mainContainer.light .sectionDetail .sectionImg {
     }
@@ -575,6 +577,9 @@
     .mainContainer.dark .sectionDetail .sectionControls {
     }
     .sectionControls a {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
     }
     .mainContainer.light .sectionDetail .sectionControls a {
     }
@@ -597,8 +602,13 @@
     .subjectsControls {
     }
     .subjectsControls .pageNum {
+        width: 40px;
+        height: 40px;
     }
     .subjectsControls a {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
     }
     .subjectsControls a:hover {
     }
