@@ -53,18 +53,166 @@
 }
 
 .googleAdenses,
-.usageAgreement {
+.usageAgreement,
+.userLogin {
     width: 85%;
+    /* min-height: 100vh; */
     margin: 0 auto;
     padding-top: 75px;
     display: flex;
     align-items: flex-start;
 }
 .googleAdensesContent,
-.usageAgreementContent {
+.usageAgreementContent,
+.userLoginContent {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     backdrop-filter: blur(20px);
+}
+
+.userLogin {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.userLoginContent {
+    position: relative;
+    width: 75%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: 1px solid var(--navSkyBlue);
+    backdrop-filter: blur(10px);
+}
+.mainContainer.dark .userLoginContent {
+    color: var(--grayWhite);
+    border: 1px solid var(--darkBlack);
+}
+.userLoginContent::before {
+    position: absolute;
+    content: 'تسجيل الدخول';
+    width: 25%;
+    height: 50px;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75em;
+    font-family: var(--mainArFont);
+    border-radius: 15px;
+    border: 1px solid var(--navSkyBlue);
+    background-color: var(--grayWhite);
+}
+.mainContainer.dark .userLoginContent::before {
+    background-color: var(--grayBlack);
+    border: 1px solid var(--darkBlack);
+}
+
+.userLoginContent form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.userLoginContent .inputBox {
+    position: relative;
+    width: 100%;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.userLoginContent form span {
+    font-size: 1.15em;
+    font-family: var(--mainArFont);
+    text-shadow: 0 0 5px rgb(0, 0, 0, 0.25);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.mainContainer.dark .userLoginContent form span {
+    color: var(--grayWhite);
+}
+.userLoginContent form input {
+    width: 100%;
+    padding: 5px 0;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--mainArFont);
+    text-align: center;
+    text-shadow: 0 0 5px rgb(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+    background-color: transparent;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.mainContainer.light .userLoginContent form input {
+    color: var(--grayBlack);
+    border-bottom: 1px solid var(--navSkyBlue);
+}
+.mainContainer.dark .userLoginContent form input {
+    color: var(--grayWhite);
+    border-bottom: 1px solid var(--grayWhite);
+}
+.userLoginContent form a {
+    text-decoration: none;
+    color: var(--grayBlack);
+    font-family: var(--mainArFont);
+    font-weight: 400;
+    text-shadow: 0 0 5px rgb(0, 0, 0, 0.25);
+}
+.mainContainer.dark .userLoginContent form a {
+    color: var(--grayWhite);
+}
+.userLoginContent form button[type="submit"] {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    bottom: -25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 25px;
+    color: var(--grayWhite);
+    font-family: var(--mainArFont);
+    font-size: 1em;
+    border: none;
+    -webkit-box-shadow: 0 0 10px 2.5px rgba(0, 0, 0, 0.15),
+        0 0 10px 2.5px rgba(0, 0, 0, 0.075) inset;
+            box-shadow: 0 0 10px 2.5px rgba(0, 0, 0, 0.15),
+        0 0 10px 2.5px rgba(0, 0, 0, 0.075) inset;
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.userLoginContent form button[type="submit"]:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+}
+.mainContainer.light .userLoginContent form button[type="submit"] {
+    background: var(--navSkyBlue);
+}
+.mainContainer.dark .userLoginContent form button[type="submit"] {
+    background: -o-linear-gradient(315deg, rgba(33,33,33,1) 50%, rgba(22,22,22,1) 120%);
+    background: linear-gradient(135deg, rgba(33,33,33,1) 50%, rgba(22,22,22,1) 120%);
+    border: 1px solid var(--grayBlack);
 }
