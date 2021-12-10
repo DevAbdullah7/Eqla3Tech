@@ -267,37 +267,41 @@ lastNewsIcons.forEach(function (item, ind) {
         item.classList.add('activate')
     }
 })
-lastNewsPrev.onclick = function () {
-    if (lastNewsCounter !== 0) {
-        lastNewsCounter -= 1;
-    } else {
-        lastNewsCounter = 5;
+if (lastNewsPrev) {
+    lastNewsPrev.onclick = function () {
+        if (lastNewsCounter !== 0) {
+            lastNewsCounter -= 1;
+        } else {
+            lastNewsCounter = lastNewsSections.length - 1;
+        }
+        lastNewsSections.forEach(function (item) {
+            item.classList.remove('activate')
+        })
+        lastNewsIcons.forEach(function (item) {
+            item.classList.remove('activate')
+        })
+        lastNewsSections[lastNewsCounter].classList.add('activate');
+        lastNewsIcons[lastNewsCounter].classList.add('activate');
+        window.localStorage.setItem('lastNewsCounter', String(lastNewsCounter))
     }
-    lastNewsSections.forEach(function (item) {
-        item.classList.remove('activate')
-    })
-    lastNewsIcons.forEach(function (item) {
-        item.classList.remove('activate')
-    })
-    lastNewsSections[lastNewsCounter].classList.add('activate');
-    lastNewsIcons[lastNewsCounter].classList.add('activate');
-    window.localStorage.setItem('lastNewsCounter', String(lastNewsCounter))
 }
-lastNewsNext.onclick = function () {
-    if (lastNewsCounter !== 5) {
-        lastNewsCounter += 1;
-    } else {
-        lastNewsCounter = 0;
+if (lastNewsNext) {
+    lastNewsNext.onclick = function () {
+        if (lastNewsCounter !== lastNewsSections.length - 1) {
+            lastNewsCounter += 1;
+        } else {
+            lastNewsCounter = 0;
+        }
+        lastNewsSections.forEach(function (item) {
+            item.classList.remove('activate')
+        })
+        lastNewsIcons.forEach(function (item) {
+            item.classList.remove('activate')
+        })
+        lastNewsSections[lastNewsCounter].classList.add('activate');
+        lastNewsIcons[lastNewsCounter].classList.add('activate');
+        window.localStorage.setItem('lastNewsCounter', String(lastNewsCounter))
     }
-    lastNewsSections.forEach(function (item) {
-        item.classList.remove('activate')
-    })
-    lastNewsIcons.forEach(function (item) {
-        item.classList.remove('activate')
-    })
-    lastNewsSections[lastNewsCounter].classList.add('activate');
-    lastNewsIcons[lastNewsCounter].classList.add('activate');
-    window.localStorage.setItem('lastNewsCounter', String(lastNewsCounter))
 }
 lastNewsIcons.forEach(function (icon, index) {
     icon.onclick = function () {
@@ -324,7 +328,7 @@ function lastNewsSlide() {
     lastNewsIcons.forEach(function (item) {
         item.classList.remove('activate')
     });
-    if (lastNewsCounter === 5) {
+    if (lastNewsCounter === lastNewsSections.length) {
         lastNewsCounter = 0
     } else {
         lastNewsCounter += 1;
@@ -333,17 +337,22 @@ function lastNewsSlide() {
     lastNewsIcons[lastNewsCounter].classList.add('activate')
     window.localStorage.setItem('lastNewsCounter', String(lastNewsCounter))
 }
-let slide = window.setInterval(lastNewsSlide, 10000)
-document.querySelector('.lastNewsSection').onmouseover = function () {
-    clearInterval(slide)
-}
-document.querySelector('.lastNewsSection').onmouseleave = function () {
-    slide = window.setInterval(lastNewsSlide, 10000)
-}
-if (window.innerWidth < 481) {
-    document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3) + 1}, 225px)`
-} else if (window.innerWidth < 769) {
-    document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3) + 1}, 240px)`
-} else {
-    document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3)}, 325px)`
+
+// let slide = window.setInterval(lastNewsSlide, 10000)
+// if (document.querySelector('.lastNewsSection')) {
+//     document.querySelector('.lastNewsSection').onmouseover = function () {
+//         clearInterval(slide)
+//     }
+//     document.querySelector('.lastNewsSection').onmouseleave = function () {
+//         slide = window.setInterval(lastNewsSlide, 10000)
+//     }
+// }
+if (document.querySelector('.sectionsContainer')) {
+    if (window.innerWidth < 481) {
+        document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3) + 1}, 225px)`
+    } else if (window.innerWidth < 769) {
+        document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3) + 1}, 240px)`
+    } else {
+        document.querySelector('.sectionsContainer').style['grid-template-rows'] = `repeat(${Math.ceil(sectionsItems.length / 3)}, 325px)`
+    }
 }
