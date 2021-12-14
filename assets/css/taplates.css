@@ -340,6 +340,7 @@
     .mainContainer.light .sectionsContent::-webkit-scrollbar-thumb {
     }
     .sectionsInfo {
+        transform: none;
     }
     .sectionsInfo div {
     }
@@ -482,6 +483,13 @@
     }
 
     .subjectsContent {
+    }
+    .subjectsContent .subjects::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+    }
+    .subjectsContent .subjects::-webkit-scrollbar::-webkit-scrollbar-thumb {
+        background: transparent;
     }
     .subjectsContent .subjects {
     }
@@ -741,13 +749,17 @@
         width: 100%;
     }
     h6 {
-        font-size: 1.1em;
+        text-align: center;
+        font-size: 1.5em;
     }
     h6 .highLine {
+        display: none;
     }
     .mainContainer.dark h6 .highLine {
     }
     h6 .Eng {
+        margin-right: 5px;
+        letter-spacing: 2.5px;
     }
 
     .contactCard .contactInfo {
