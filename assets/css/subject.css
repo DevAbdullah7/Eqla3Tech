@@ -6,7 +6,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 .subject .subjectInfo {
     position: absolute;

@@ -110,6 +110,7 @@ html {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
+    height: 100vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -420,6 +421,7 @@ html {
 .mainContainer {
     position: relative;
     width: 85%;
+    min-height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -572,9 +574,6 @@ html {
             flex-direction: column;
     cursor: pointer;
 }
-.menuMobile.activate{
-    /* display: none; */
-}
 .menuMobile span {
     width: 90%;
     height: 5px;
@@ -605,13 +604,13 @@ html {
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+    overflow: hidden;
 }
 .mainContainer.dark .homePage {
 }
 .homeContent {
     position: relative;
     width: 100%;
-    height: 850px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
