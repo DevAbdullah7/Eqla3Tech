@@ -220,7 +220,7 @@ let sectionsItems = document.querySelectorAll('.sectionsContainer .section');
 let date = new Date()
 let timeNow = document.querySelector('.dateTime .time')
 let dateNow = document.querySelector('.dateTime .date')
-dateNow.innerHTML = (String(date.getDate()) + '/' + String(date.getMonth()) + '/' + String(date.getFullYear()));
+dateNow.innerHTML = (String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth()).padStart(2, '0') + '/' + String(date.getFullYear()));
 let hourNow = 0;
 let amPm = '';
 if (date.getHours() !== 0) {
